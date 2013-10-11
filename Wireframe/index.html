@@ -1,0 +1,2378 @@
+<!doctype html>
+
+<!--[if lt IE 7 ]> <html class="ie ie6 no-js" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie ie7 no-js" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie ie8 no-js" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie ie9 no-js" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<!-- the "no-js" class is for Modernizr. -->
+
+<head data-template-set="payza-web-app">
+
+	<meta charset="utf-8">
+	
+	<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
+	<title>Payza Web App Template</title>
+	
+	<meta name="title" content="Payza E-wallet">
+	<meta name="description" content="Payza is a simple and secure way to manage online payments without revealing personal and financial information.">
+	<!-- Google will often use this as its description of your page/site. Make it good. -->
+	
+	<meta name="google-site-verification" content="">
+	<!-- Speaking of Google, don't forget to set your site up: http://google.com/webmasters -->
+	
+	<meta name="author" content="Aureabelle Cruz">
+	<meta name="Copyright" content="Copyright Payza 2012. All Rights Reserved.">
+
+	<!-- Dublin Core Metadata : http://dublincore.org/ -->
+	<meta name="DC.title" content="Payza">
+	<meta name="DC.subject" content="Online payments management tool.">
+	<meta name="DC.creator" content="Payza">
+	
+	<!--  Mobile Viewport Fix
+	j.mp/mobileviewport & davidbcalhoun.com/2010/viewport-metatag 
+	device-width : Occupy full width of the screen in its current orientation
+	initial-scale = 1.0 retains dimensions instead of zooming out if page height > device height
+	maximum-scale = 1.0 retains dimensions instead of zooming in if page width < device width
+	-->
+	<!-- Uncomment to use; use thoughtfully!
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	-->
+
+	<!-- <link rel="shortcut icon" href="img/favicon.ico">
+	This is the traditional favicon.
+		 - size: 16x16 or 32x32
+		 - transparency is OK
+		 - see wikipedia for info on browser support: http://mky.be/favicon/ -->
+		 
+	<!--<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+	 The is the icon for iOS's Web Clip.
+		 - size: 57x57 for older iPhones, 72x72 for iPads, 114x114 for iPhone4's retina display (IMHO, just go ahead and use the biggest one)
+		 - To prevent iOS from applying its styles to the icon name it thusly: apple-touch-icon-precomposed.png
+		 - Transparency is not recommended (iOS will put a black BG behind the icon) -->
+	
+	<!-- Google API -->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+	
+	<!-- CSS: default screen + screen browser fixes + responsive (window size 800px or less) -->
+	<link rel="stylesheet" href="css/style.css" media="screen">
+	<link rel="stylesheet" href="css/fix.css" media="screen">
+	<link rel="stylesheet" href="css/style-800.css" media="screen and (max-width: 800px)">
+	
+	<!-- all our JS is at the bottom of the page, except for Modernizr. -->
+	<script src="js/modernizr-1.7.min.js"></script>
+
+</head>
+
+<body>
+
+<!-- Insert the page-level class along the wrapper class, for a wider scope page-level overwriting. Page-level classes could be the "page name". 
+		 Example: class="wrapper account-overview" - where "account-overview" is the "name" of the page. -->
+<div class="wrapper">
+
+	<header>
+  	<div class="top-menu">
+    	<div class="content">
+        <ul>
+          <li class="first">
+            <a href="#">Account Settings</a>
+            <ul>
+              <li class="first"><a href="#">Account Verification</a></li>
+              <li><a href="#">Personal Information</a></li>
+              <li><a href="#">Email Address</a></li>
+              <li><a href="#">Email Preferences</a></li>
+              <li><a href="#">Password</a></li>
+              <li><a href="#">Transaction PIN</a></li>
+              <li><a href="#">Upgrade Account</a></li>
+              <li class="last"><a href="#">Close Account</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Language</a>
+            <ul>
+              <li class="first"><a href="#">Fran&ccedil;ais</a></li>
+              <li class="last"><a href="#">Language Preferences</a></li>
+            </ul>
+          </li>
+          <li class="last"><a href="#">Log out</a></li>
+        </ul>
+      </div>
+    </div>
+  
+		<div class="content">
+		<a class="logo" href="#"><img src="images/payza-logo.png" alt="Payza Logo"></a>
+			<div class="greetings">
+				<p><strong>Welcome, Sonu Test!</strong></p>
+				<dl class="account-info">
+					<dt>Email</dt>
+					<dd class="account-email">email@email.com</dd>
+
+					<dt>Account Type</dt>
+					<dd class="account-type">
+            <a href="#" class="icon-24 icn-business-unverified icon-only">Business - Unverified - Get verified now.</a>
+						<!-- Accounts that are "unverified" should be wrapped in <a href="URL">. Here are the account types:
+            <span class="icon-24 icn-personal-starter-verified icon-only">Personal Starter - Verified</span>
+            <a href="#" class="icon-24 icn-personal-starter-unverified icon-only">Personal Starter - Unverified - Get verified now.</a>
+						<span class="icon-24 icn-personal-pro-verified icon-only">Personal Pro - Verified</span>
+						<a href="#" class="icon-24 icn-personal-pro-unverified icon-only">Personal Pro - Unverified - Get verified now.</a>
+						<span class="icon-24 icn-business-verified icon-only">Business - Verified</span>
+						<a href="#" class="icon-24 icn-business-unverified icon-only">Business - Unverified - Get verified now.</a>
+            -->
+					</dd>
+				</dl>
+			</div>
+
+			<nav class="clearfix">
+				<!-- Mega Menu Start -->
+				<ul class="account-menu">
+					<li class="first">
+						<ul>
+							<li><a href="#" class="icon-24 icn-dashboard category">Dashboard</a></li>
+							<li class="menu-transactions">
+								<span class="icon-24 icn-transactions category">My Transactions</span>
+								<ul>
+									<li><a href="#">History</a></li>
+									<li><a href="#">Resolution Center</a></li>
+								</ul>
+							</li>
+							<li><a href="#" class="icon-24 icn-verification category">Account Verification</a></li>
+						</ul>
+					</li>
+
+					<li>
+						<ul>
+							<li>
+								<span class="icon-24 icn-manage-money category">Manage my Money</span>
+								<ul>
+									<li><a href="#">Credit Cards</a></li>
+									<li><a href="#">Bank Accounts</a></li>
+									<li><a href="#">Prepaid Card</a></li>
+									<li><a href="#">Purchased Subscriptions</a></li>
+									<li><a href="#">Payment Preferences</a></li>
+									<li><a href="#">Managed &amp; Exchange Currencies</a></li>
+									<li><a href="#">Referral Program</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+
+					<li class="last">
+						<ul>
+							<li>
+								<span class="icon-24 icn-manage-business category">Manage my Business</span>
+								<ul>
+									<li><a href="#">Manage Personal Pro Account</a></li>
+									<li><a href="#">Websites</a></li>
+									<li><a href="#">Buy Now Buttons</a></li>
+									<li><a href="#">Donate Buttons</a></li>
+									<li><a href="#">Subscriptions</a></li>
+									<li><a href="#">Manage Terms of Services</a></li>
+									<li><a href="#">IPN Advanced Integration</a></li>
+									<li><a href="#">API Advanced Integration</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<!-- Mega Menu End -->
+        
+        
+        <!-- Action Menu Start -->
+				<ul class="action-menu">
+					<li class="first selected"><a href="#" class="icon-36 icn-menu-send">Send Funds</a></li>
+					<li><a href="#" class="icon-36 icn-menu-request">Request Funds</a></li>
+					<li><a href="#" class="icon-36 icn-menu-add">Add Funds</a></li>
+					<li class="last"><a href="#" class="icon-36 icn-menu-withdraw">Withdraw Funds</a></li>
+				</ul>
+        <!-- Action Menu End -->
+      
+        <!-- Start Sub-Navigation -->
+        <div class="sub-nav">
+          <ul>
+              <li><a href="#" class="selected">Manage Credit Cards</a></li>
+              <li><a href="#">Add Credit Cards</a></li>
+          </ul>
+        </div>
+        <!-- End Sub-Navigation -->
+      
+			</nav>
+      
+      
+      
+		</div>
+	</header>
+	
+	<div class="main">
+      
+    <!-- Page Columns Start: Single or double (left, right split) column layout -->
+    
+    <!-- Single Column Page Start -->
+    <div class="content">
+    	<div class="breadcrumbs">
+			<ul class="clearfix">
+			  <li><a href="#" class="icon-16 icn-home icon-only">Home</a></li>
+			  <li><a href="#">Category</a></li>
+			  <li><a href="#">Sub-category</a></li>
+			  <li>Sub-sub-category</li>
+			</ul>
+		</div>
+      
+      <div class="main-content">
+          <h1>Single Column Layout</h1>
+          <p>This is a single column page. </p>
+      </div>
+    </div>
+    <!-- Single Column Page End -->
+
+		<!-- 2-Column Page (Right Split) Start -->
+    <div class="content">
+    	<div class="breadcrumbs">
+      	<ul class="clearfix">
+        	<li class="first"><a href="#" class="icon-16 icn-home icon-only">Home</a></li>
+          <li><a href="#">Category</a></li>
+          <li><a href="#">Sub-category</a></li>
+          <li class="last">Sub-sub-category</li>
+        </ul>
+      </div>
+      
+      <div class="main-side right-split">
+      	<div class="main-content">
+          <h1>2-column Layout (Right Split)</h1>
+          <p>This is a 2-column (right split) layout which can be used for pages containing 2-split layout.</p>
+        </div>
+        
+        <div class="side-content">
+        	<p>This is the side content</p>
+        </div>
+      </div>
+    </div>
+    <!-- 2-Column Page (Right Split) End -->
+
+		<!-- 2-Column Page (Left Split) Start -->
+    <div class="content">
+    	<div class="breadcrumbs">
+      	<ul class="clearfix">
+        	<li class="first"><a href="#" class="icon-16 icn-home icon-only">Home</a></li>
+          <li><a href="#">Category</a></li>
+          <li><a href="#">Sub-category</a></li>
+          <li class="last">Sub-sub-category</li>
+        </ul>
+      </div>
+      
+      <div class="main-side left-split">
+        <div class="side-content">
+        	<p>This is the side content</p>
+        </div>
+        
+        <div class="main-content">
+          <h1>2-column Layout (Left Split)</h1>
+          <p>This is a 2-column (left split) layout which can be used for pages containing 2-split layout.</p>
+        </div>        
+      </div>
+    </div>
+    <!-- 2-Column Page (Left Split) End -->
+
+    <!-- Page Columns End -->
+    
+    
+    
+		<div class="content">
+    	<div class="breadcrumbs">
+      	<ul class="clearfix">
+        	<li class="first"><a href="#" class="icon-16 icn-home icon-only">Home</a></li>
+          <li><a href="#">Category</a></li>
+          <li><a href="#">Sub-category</a></li>
+          <li class="last">Sub-sub-category</li>
+        </ul>
+      </div>
+    		
+        <div class="main-content">         
+          <!-- Messages: The usage of these messages are for single-phrase type of message only due to the fact that they are set to accommodate short messages. -->
+          <h2>Messages</h2>
+          <p>Messages should not be confused with regular contents. User-invoked or messages that came from the system are temporary and are meant to appear as a consequence of an action. It is recommended to use these messages sparringly and in context because they will lose their effectiveness if overused. Consistent use of these messages can also be effective to get users familiar with the behavior of the UI.</p>
+          
+          <h3>Global Messages (User-invoked messages)</h3>
+          <p>Global messages are used for user-invoked messages, such as when a user submitted a form and in return gets a success message. These type of messages are designed to accommodate single-phrase messages. They can be paired with any icons or use them as they are. To use any of these messages, simply attach <code>class="message"</code> plus <code>msg-success</code> or <code>msg-fail</code> or <code>msg-warning</code> or <code>msg-reminder</code> to a block element.</p>
+          <p>Do not use global message type for messages that consist of multiple blocks elements.</p>
+          
+          <h4>Success, approved, accepted</h4>
+          <p class="global-message msg-success"><span class="icon-16 icn-check">This is a success message.</span></p>
+          <p class="global-message msg-success">This is a success message.</p>
+          
+          <h4>Error, failed</h4>
+          <p class="global-message msg-fail"><span class="icon-16 icn-attention">This is some error / fail message.</span></p>
+          <p class="global-message msg-fail">This is some error / fail global-message.</p>
+                    
+          <h4>Warning</h4>
+          <p class="global-message msg-warning"><span class="icon-16 icn-attention">This is a warning message.</span></p>
+          <p class="global-message msg-warning"><strong>Warning: </strong>This is a warning message.</p>
+                    
+          <h4>Note, reminder, additional info</h4>
+          <p class="global-message msg-reminder"><span class="icon-16 icn-help">This is some note / reminder / additional info.</span></p>
+          <p class="global-message msg-reminder"><strong>Note:</strong> This is some note / reminder / additional info.</p>
+          
+          
+          <hr />
+          
+          <!-- Content Messages: The usage is to accommodate content "messages" with labels. -->
+          <h3>Content Messages</h3>
+          <p>Content messages are messages that can be found in the page content. One can easily distinguish what to use to a certain situation. The colored content messages are the ones that should be used for temporary messages like system or service changes and/or updates. The neutral type should be used for contents like More Information, Did you know type of contents.</p>
+          
+          <h4>Warning</h4>
+          <p>Warning can be used for any type of message that may require an immediate attention or to warn someone about something if not done, bad state.</p>
+          <div class="content-message content-msg-warning">
+          	<h6 class="message-type icon-16 icn-attention">Warning</h6>
+            <div class="message-details">
+              <p>This is some message but contains lines and lines of text.</p>
+              <p>It could contain bullets, quotes and other things that you could think of.</p>
+            </div>
+          </div>
+          
+          <h4>Attention</h4>
+          <p>Attention can be used for any type of message that requires immediate action or negative, worse state.</p>
+          <div class="content-message content-msg-attention">
+          	<h6 class="message-type icon-16 icn-info">Attention</h6>
+            <div class="message-details">
+              <p>This is some message but contains lines and lines of text.</p>
+              <p>It could contain bullets, quotes and other things that you could think of.</p>
+            </div>
+          </div>
+          
+          <h4>Information</h4>
+          <p>This can be used for any type of message that is positive.</p>
+          <div class="content-message content-msg-information">
+          	<h6 class="message-type icon-16 icn-info">Information</h6>
+            <div class="message-details">
+              <p>This is some message but contains lines and lines of text.</p>
+              <p>It could contain bullets, quotes and other things that you could think of.</p>
+            </div>
+          </div>
+          
+          <h4>General</h4>
+          <p>This can be used for any neutral type of content message. Messages that do not require immediate attention or action but need to be given emphasis.</p>
+          <div class="content-message content-msg-general">
+          	<h6 class="message-type icon-16 icn-info">Did you know</h6>
+            <div class="message-details">
+              <p>This is some message but contains lines and lines of text.</p>
+              <p>It could contain bullets, quotes and other things that you could think of.</p>
+            </div>
+          </div>
+
+
+          <hr />
+
+
+          
+          <!-- Table: -->
+          <h2>Table</h2>
+          <h3>Default Table</h3>
+          <p>The default table can be used for static tabular data that requires no action to very minimal user-interaction such as clicking a link.</p>
+
+          <table>
+          	<caption>This is the table caption.</caption>
+          	<thead>
+            	<tr>
+              	<th>Email</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Department</th>
+                <th>Title</th>
+              </tr>
+            </thead>
+            
+            <tfoot>
+            	<tr>
+              	<td colspan="5">This is the table footer.</td>
+              </tr>
+            </tfoot>
+            
+            <tbody>
+            	<tr>
+              	<td><a href="#" title="RandriamangasonHajanavalona@email.com">RandriamangasonHajanavalona@email.com</a></td>
+                <td>Randriamangason</td>
+                <td>Hajanavalona</td>
+                <td>Research and Development</td>
+                <td>Software Developer</td>
+              </tr>
+              
+            	<tr>
+              	<td><a href="#">xavier@payza.com</a></td>
+                <td>Xavier</td>
+                <td>Francis</td>
+                <td>Research and Development</td>
+                <td>Team Leader - Business Analyst &amp; Agile Coach-SomeExtraStringsToMakeItEvenLonger</td>
+              </tr>
+              
+            	<tr>
+              	<td>Content 1</td>
+                <td>Content 2</td>
+                <td>Content 3</td>
+                <td>Content 4</td>
+                <td>Content 5</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>In cases where there are long strings of data, a <code>class</code> may be created to make the visual adjustments in a column. Each cell in the column in question should have the created style. Additionally, long string data may need to be wrapped in blocked element in some browsers. Also note that any "clipped" long string data should have the attribute <code>title</code>.</p>
+          <p>For example, in place of the inline CSS on the cells "Email" and "Title", a class called <code>.email</code> and <code>.title</code> may be created (containing the rules for the <code>width</code> and <code>word-break</code>), and then may be attached respectively.</p>           
+          <hr />
+          <h2>Icons</h2>
+          <p>Include the class <code>flag-16</code> (flags or currencies) or <code>icon-16</code> (default 16-pixel icons) or <code>icon-24</code> (default 24-pixel icons) or <code>icon-36</code> (default 36-pixel icons) to load up the corresponding sprite for the icon. The class <code>fl-<em>countrycode</em></code> or <code>icn-<em>something</em></code> must also be included in order to get the specific icon.</p> 
+          <p>In addition, should you want to have just the icon the class <code>icon-only</code> must be added.</p>
+          <p>Add any of these class combinations to an element and javascript will do rest, given that javascript is enabled.</p>
+          <h3>16x16</h3>
+          <h4>Flags</h4>
+          <p>The flag icon can used to represent a country or currency. The flag icons use the class <code>flag-16</code> plus <code>fl-<em>countrycode</em></code>. For example,</p>
+          <pre>&lt;span <code>class="flag-16 fl-ca"</code>&gt;Canada&lt;/span&gt;</pre>
+          <p><span class="flag-16 fl-ca">Canada</span></p>
+          <pre>&lt;span class="flag-16 fl-ca <code>icon-only</code>"&gt;Canada&lt;/span&gt;</pre>
+          <p><span class="flag-16 fl-ca icon-only">Canada</span></p>
+          <table>
+              <thead>
+                  <tr>
+                      <th colspan="10">List of Flags / Currency</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td><span class="flag-16 fl-ad">AD</span></td>
+                      <td><span class="flag-16 fl-ae">AE</span></td>
+                      <td><span class="flag-16 fl-af">AF</span></td>
+                      <td><span class="flag-16 fl-ag">AG</span></td>
+                      <td><span class="flag-16 fl-ai">AI</span></td>
+                      <td><span class="flag-16 fl-al">AL</span></td>
+                      <td><span class="flag-16 fl-am">AM</span></td>
+                      <td><span class="flag-16 fl-an">AN</span></td>
+                      <td><span class="flag-16 fl-ao">AO</span></td>
+                      <td><span class="flag-16 fl-aq">AQ</span></td>
+                  </tr>
+                  
+                  <tr>
+                      <td><span class="flag-16 fl-ar">AR</span></td>
+                      <td><span class="flag-16 fl-as">AS</span></td>
+                      <td><span class="flag-16 fl-at">AT</span></td>
+                      <td><span class="flag-16 fl-au">AU</span></td>
+                      <td><span class="flag-16 fl-aw">AW</span></td>
+                      <td><span class="flag-16 fl-ax">AX</span></td>
+                      <td><span class="flag-16 fl-az">AZ</span></td>
+                      <td><span class="flag-16 fl-ba">BA</span></td>
+                      <td><span class="flag-16 fl-bb">BB</span></td>
+                      <td><span class="flag-16 fl-bd">BD</span></td>
+                  </tr>
+                  
+                  <tr>
+                      <td><span class="flag-16 fl-be">BE</span></td>
+                      <td><span class="flag-16 fl-bf">BF</span></td>
+                      <td><span class="flag-16 fl-bg">BG</span></td>
+                      <td><span class="flag-16 fl-bh">BH</span></td>
+                      <td><span class="flag-16 fl-bi">BI</span></td>
+                      <td><span class="flag-16 fl-bj">BJ</span></td>
+                      <td><span class="flag-16 fl-bm">BM</span></td>
+                      <td><span class="flag-16 fl-bn">BN</span></td>
+                      <td><span class="flag-16 fl-bo">BO</span></td>
+                      <td><span class="flag-16 fl-br">BR</span></td>
+                  </tr>
+                  
+                  <tr>
+                      <td><span class="flag-16 fl-bs">BS</span></td>
+                      <td><span class="flag-16 fl-bt">BT</span></td>
+                      <td><span class="flag-16 fl-bv">BV</span></td>
+                      <td><span class="flag-16 fl-bw">BW</span></td>
+                      <td><span class="flag-16 fl-by">BY</span></td>
+                      <td><span class="flag-16 fl-bz">BZ</span></td>
+                      <td><span class="flag-16 fl-ca">CA</span></td>
+                      <td><span class="flag-16 fl-catalonia">Catalonia</span></td>
+                      <td><span class="flag-16 fl-cc">CC</span></td>
+                      <td><span class="flag-16 fl-cd">CD</span></td>
+                  </tr>
+                  
+                  <tr>
+                      <td><span class="flag-16 fl-cf">CF</span></td>
+                      <td><span class="flag-16 fl-cg">CG</span></td>
+                      <td><span class="flag-16 fl-ch">CH</span></td>
+                      <td><span class="flag-16 fl-ci">CI</span></td>
+                      <td><span class="flag-16 fl-ck">CK</span></td>
+                      <td><span class="flag-16 fl-cl">CL</span></td>
+                      <td><span class="flag-16 fl-cm">CM</span></td>
+                      <td><span class="flag-16 fl-cn">CN</span></td>
+                      <td><span class="flag-16 fl-co">CO</span></td>
+                      <td><span class="flag-16 fl-cr">CR</span></td>
+                  </tr>
+                  
+                  <tr>
+                      <td><span class="flag-16 fl-cs">CS</span></td>
+                      <td><span class="flag-16 fl-cu">CU</span></td>
+                      <td><span class="flag-16 fl-cv">CV</span></td>
+                      <td><span class="flag-16 fl-cx">CX</span></td>
+                      <td><span class="flag-16 fl-cy">CY</span></td>
+                      <td><span class="flag-16 fl-cz">CZ</span></td>
+                      <td><span class="flag-16 fl-de">DE</span></td>
+                      <td><span class="flag-16 fl-dj">DJ</span></td>
+                      <td><span class="flag-16 fl-dk">DK</span></td>
+                      <td><span class="flag-16 fl-dm">DM</span></td>
+                  </tr>
+                  
+                  <tr>
+                      <td><span class="flag-16 fl-do">DO</span></td>
+                      <td><span class="flag-16 fl-dz">DZ</span></td>
+                      <td><span class="flag-16 fl-ec">EC</span></td>
+                      <td><span class="flag-16 fl-ee">EE</span></td>
+                      <td><span class="flag-16 fl-eh">EH</span></td>
+                      <td><span class="flag-16 fl-england">England</span></td>
+                      <td><span class="flag-16 fl-er">ER</span></td>
+                      <td><span class="flag-16 fl-es">ES</span></td>
+                      <td><span class="flag-16 fl-et">ET</span></td>
+                      <td><span class="flag-16 fl-eu">EU</span></td>
+                  </tr>
+                  
+                  <tr>
+                      <td><span class="flag-16 fl-europeanunion">European Union</span></td>
+                      <td><span class="flag-16 fl-fi">FI</span></td>
+                      <td><span class="flag-16 fl-fj">FJ</span></td>
+                      <td><span class="flag-16 fl-fk">FK</span></td>
+                      <td><span class="flag-16 fl-fm">FM</span></td>
+                      <td><span class="flag-16 fl-fo">FO</span></td>
+                      <td><span class="flag-16 fl-fr">FR</span></td>
+                      <td><span class="flag-16 fl-ga">GA</span></td>
+                      <td><span class="flag-16 fl-gb">GB</span></td>
+                      <td><span class="flag-16 fl-gd">GD</span></td>
+                  </tr>
+                  
+                  <tr>
+                      <td><span class="flag-16 fl-ge">GE</span></td>
+                      <td><span class="flag-16 fl-gf">GF</span></td>
+                      <td><span class="flag-16 fl-gg">GG</span></td>
+                      <td><span class="flag-16 fl-gh">GH</span></td>
+                      <td><span class="flag-16 fl-gi">GI</span></td>
+                      <td><span class="flag-16 fl-gl">GL</span></td>
+                      <td><span class="flag-16 fl-gm">GM</span></td>
+                      <td><span class="flag-16 fl-gn">GN</span></td>
+                      <td><span class="flag-16 fl-gp">GP</span></td>
+                      <td><span class="flag-16 fl-gq">GQ</span></td>
+                  </tr>
+                  
+                  <tr>
+                      <td><span class="flag-16 fl-gr">GR</span></td>
+                      <td><span class="flag-16 fl-gs">GS</span></td>
+                      <td><span class="flag-16 fl-gt">GT</span></td>
+                      <td><span class="flag-16 fl-gu">GU</span></td>
+                      <td><span class="flag-16 fl-gw">GW</span></td>
+                      <td><span class="flag-16 fl-gy">GY</span></td>
+                      <td><span class="flag-16 fl-hk">HK</span></td>
+                      <td><span class="flag-16 fl-hm">HM</span></td>
+                      <td><span class="flag-16 fl-hn">HN</span></td>
+                      <td><span class="flag-16 fl-hr">HR</span></td>
+                  </tr>
+                  
+                  <tr>
+                      <td><span class="flag-16 fl-ht">HT</span></td>
+                      <td><span class="flag-16 fl-hu">HU</span></td>
+                      <td><span class="flag-16 fl-id">ID</span></td>
+                      <td><span class="flag-16 fl-ie">IE</span></td>
+                      <td><span class="flag-16 fl-il">IL</span></td>
+                      <td><span class="flag-16 fl-in">IN</span></td>
+                      <td><span class="flag-16 fl-io">IO</span></td>
+                      <td><span class="flag-16 fl-iq">IQ</span></td>
+                      <td><span class="flag-16 fl-ir">IR</span></td>
+                      <td><span class="flag-16 fl-is">IS</span></td>
+                  </tr>
+                  
+                  <tr>
+                      <td><span class="flag-16 fl-it">IT</span></td>
+                      <td><span class="flag-16 fl-jm">JM</span></td>
+                      <td><span class="flag-16 fl-jo">JO</span></td>
+                      <td><span class="flag-16 fl-jp">JP</span></td>
+                      <td><span class="flag-16 fl-ke">KE</span></td>
+                      <td><span class="flag-16 fl-kg">KG</span></td>
+                      <td><span class="flag-16 fl-kh">KH</span></td>
+                      <td><span class="flag-16 fl-ki">KI</span></td>
+                      <td><span class="flag-16 fl-km">KM</span></td>
+                      <td><span class="flag-16 fl-kn">KN</span></td>
+                  </tr>
+                  
+                  <tr>
+                      <td><span class="flag-16 fl-ko">KO</span></td>
+                      <td><span class="flag-16 fl-kp">KP</span></td>
+                      <td><span class="flag-16 fl-kr">KR</span></td>
+                      <td><span class="flag-16 fl-kw">KW</span></td>
+                      <td><span class="flag-16 fl-ky">KY</span></td>
+                      <td><span class="flag-16 fl-kz">KZ</span></td>
+                      <td><span class="flag-16 fl-la">LA</span></td>
+                      <td><span class="flag-16 fl-lb">LB</span></td>
+                      <td><span class="flag-16 fl-lc">LC</span></td>
+                      <td><span class="flag-16 fl-li">LI</span></td>
+                  </tr>
+                  
+                  <tr>
+                      <td><span class="flag-16 fl-lk">LK</span></td>
+                      <td><span class="flag-16 fl-lr">LR</span></td>
+                      <td><span class="flag-16 fl-ls">LS</span></td>
+                      <td><span class="flag-16 fl-lt">LT</span></td>
+                      <td><span class="flag-16 fl-lu">LU</span></td>
+                      <td><span class="flag-16 fl-lv">LV</span></td>
+                      <td><span class="flag-16 fl-ly">LY</span></td>
+                      <td><span class="flag-16 fl-ma">MA</span></td>
+                      <td><span class="flag-16 fl-mc">MC</span></td>
+                      <td><span class="flag-16 fl-md">MD</span></td>
+                  </tr>
+                  
+                  <tr>
+                      <td><span class="flag-16 fl-me">ME</span></td>
+                      <td><span class="flag-16 fl-mg">MG</span></td>
+                      <td><span class="flag-16 fl-mh">MH</span></td>
+                      <td><span class="flag-16 fl-mk">MK</span></td>
+                      <td><span class="flag-16 fl-ml">ML</span></td>
+                      <td><span class="flag-16 fl-mm">MM</span></td>
+                      <td><span class="flag-16 fl-mn">MN</span></td>
+                      <td><span class="flag-16 fl-mo">MO</span></td>
+                      <td><span class="flag-16 fl-mp">MP</span></td>
+                      <td><span class="flag-16 fl-mq">MQ</span></td>
+                  </tr>
+                  
+                  <tr>
+                      <td><span class="flag-16 fl-mr">MR</span></td>
+                      <td><span class="flag-16 fl-ms">MS</span></td>
+                      <td><span class="flag-16 fl-mt">MT</span></td>
+                      <td><span class="flag-16 fl-mu">MU</span></td>
+                      <td><span class="flag-16 fl-mv">MV</span></td>
+                      <td><span class="flag-16 fl-mw">MW</span></td>
+                      <td><span class="flag-16 fl-mx">MX</span></td>
+                      <td><span class="flag-16 fl-my">MY</span></td>
+                      <td><span class="flag-16 fl-mz">MZ</span></td>
+                      <td><span class="flag-16 fl-na">NA</span></td>
+                  </tr>
+                  
+                  <tr>
+                      <td><span class="flag-16 fl-nc">NC</span></td>
+                      <td><span class="flag-16 fl-ne">NE</span></td>
+                      <td><span class="flag-16 fl-nf">NF</span></td>
+                      <td><span class="flag-16 fl-ng">NG</span></td>
+                      <td><span class="flag-16 fl-ni">NI</span></td>
+                      <td><span class="flag-16 fl-nl">NL</span></td>
+                      <td><span class="flag-16 fl-no">NO</span></td>
+                      <td><span class="flag-16 fl-np">NP</span></td>
+                      <td><span class="flag-16 fl-nr">NR</span></td>
+                      <td><span class="flag-16 fl-nu">NU</span></td>
+                  </tr>
+                  
+                  <tr>
+                      <td><span class="flag-16 fl-nz">NZ</span></td>
+                      <td><span class="flag-16 fl-om">OM</span></td>
+                      <td><span class="flag-16 fl-pa">PA</span></td>
+                      <td><span class="flag-16 fl-pe">PE</span></td>
+                      <td><span class="flag-16 fl-pf">PF</span></td>
+                      <td><span class="flag-16 fl-pg">PG</span></td>
+                      <td><span class="flag-16 fl-ph">PH</span></td>
+                      <td><span class="flag-16 fl-pk">PK</span></td>
+                      <td><span class="flag-16 fl-pl">PL</span></td>
+                      <td><span class="flag-16 fl-pm">PM</span></td>
+                  </tr>
+                  
+                  <tr>
+                      <td><span class="flag-16 fl-pn">PN</span></td>
+                      <td><span class="flag-16 fl-pr">PR</span></td>
+                      <td><span class="flag-16 fl-ps">PS</span></td>
+                      <td><span class="flag-16 fl-pt">PT</span></td>
+                      <td><span class="flag-16 fl-pw">PW</span></td>
+                      <td><span class="flag-16 fl-py">PY</span></td>
+                      <td><span class="flag-16 fl-qa">QA</span></td>
+                      <td><span class="flag-16 fl-re">RE</span></td>
+                      <td><span class="flag-16 fl-ro">RO</span></td>
+                      <td><span class="flag-16 fl-rs">RS</span></td>
+                  </tr>
+                  
+                  <tr>
+                      <td><span class="flag-16 fl-ru">RU</span></td>
+                      <td><span class="flag-16 fl-rw">RW</span></td>
+                      <td><span class="flag-16 fl-sa">SA</span></td>
+                      <td><span class="flag-16 fl-sb">SB</span></td>
+                      <td><span class="flag-16 fl-sc">SC</span></td>
+                      <td><span class="flag-16 fl-scotland">Scotland</span></td>
+                      <td><span class="flag-16 fl-sd">SD</span></td>
+                      <td><span class="flag-16 fl-se">SE</span></td>
+                      <td><span class="flag-16 fl-sg">SG</span></td>
+                      <td><span class="flag-16 fl-sh">SH</span></td>
+                  </tr>
+                  
+                  <tr>
+                      <td><span class="flag-16 fl-si">SI</span></td>
+                      <td><span class="flag-16 fl-sj">SJ</span></td>
+                      <td><span class="flag-16 fl-sk">SK</span></td>
+                      <td><span class="flag-16 fl-sl">SL</span></td>
+                      <td><span class="flag-16 fl-sm">SM</span></td>
+                      <td><span class="flag-16 fl-sn">SN</span></td>
+                      <td><span class="flag-16 fl-so">SO</span></td>
+                      <td><span class="flag-16 fl-sr">SR</span></td>
+                      <td><span class="flag-16 fl-st">ST</span></td>
+                      <td><span class="flag-16 fl-sv">SV</span></td>
+                  </tr>
+                  
+                  <tr>
+                      <td><span class="flag-16 fl-sy">SY</span></td>
+                      <td><span class="flag-16 fl-sz">SZ</span></td>
+                      <td><span class="flag-16 fl-tc">TC</span></td>
+                      <td><span class="flag-16 fl-td">TD</span></td>
+                      <td><span class="flag-16 fl-tf">TF</span></td>
+                      <td><span class="flag-16 fl-tg">TG</span></td>
+                      <td><span class="flag-16 fl-th">TH</span></td>
+                      <td><span class="flag-16 fl-tj">TJ</span></td>
+                      <td><span class="flag-16 fl-tk">TK</span></td>
+                      <td><span class="flag-16 fl-tl">TL</span></td>
+                  </tr>
+                  
+                  <tr>
+                      <td><span class="flag-16 fl-tm">TM</span></td>
+                      <td><span class="flag-16 fl-tn">TN</span></td>
+                      <td><span class="flag-16 fl-to">TO</span></td>
+                      <td><span class="flag-16 fl-tr">TR</span></td>
+                      <td><span class="flag-16 fl-tt">TT</span></td>
+                      <td><span class="flag-16 fl-tv">TV</span></td>
+                      <td><span class="flag-16 fl-tw">TW</span></td>
+                      <td><span class="flag-16 fl-tz">TZ</span></td>
+                      <td><span class="flag-16 fl-ua">UA</span></td>
+                      <td><span class="flag-16 fl-ug">UG</span></td>
+                  </tr>
+                  
+                  <tr>
+                      <td><span class="flag-16 fl-um">UM</span></td>
+                      <td><span class="flag-16 fl-us">US</span></td>
+                      <td><span class="flag-16 fl-uy">UY</span></td>
+                      <td><span class="flag-16 fl-uz">UZ</span></td>
+                      <td><span class="flag-16 fl-va">VA</span></td>
+                      <td><span class="flag-16 fl-vc">VC</span></td>
+                      <td><span class="flag-16 fl-ve">VE</span></td>
+                      <td><span class="flag-16 fl-vg">VG</span></td>
+                      <td><span class="flag-16 fl-vi">VI</span></td>
+                      <td><span class="flag-16 fl-vn">VN</span></td>
+                  </tr>
+                  
+                  <tr>
+                      <td><span class="flag-16 fl-vu">VU</span></td>
+                      <td><span class="flag-16 fl-wales">Wales</span></td>
+                      <td><span class="flag-16 fl-wf">WF</span></td>
+                      <td><span class="flag-16 fl-ws">WS</span></td>
+                      <td><span class="flag-16 fl-ye">YE</span></td>
+                      <td><span class="flag-16 fl-yt">YT</span></td>
+                      <td><span class="flag-16 fl-za">ZA</span></td>
+                      <td><span class="flag-16 fl-zm">ZM</span></td>
+                      <td><span class="flag-16 fl-zw">ZW</span></td>
+                      <td>&nbsp;</td>
+                  </tr>
+              </tbody>
+          </table>
+          
+          
+          <!-- Default 16x16 Icons -->
+          <h4>Default 16-pixel Icons</h4>
+          <p>The default 16-pixel icons use the class <code>icon-16</code> plus <code>icn-<em>iconcode</em></code>. Please refer to the list for icon codes. Example,</p>
+          <pre>&lt;span <code>class="icon-16 icn-email"</code>&gt;email@email.com&lt;/span&gt;</pre>
+          <p><span class="icon-16 icn-email">email@email.com</span></p>
+          <pre>&lt;span <code>class="icon-16 icn-email icon-only"</code>&gt;email@email.com&lt;/span&gt;</pre>
+          <p><span class="icon-16 icn-email icon-only">email@email.com</span></p>
+          <table>
+          	<thead>
+            	<tr>
+              	<th colspan="5">Default 16-pixel icons List</th>
+              </tr>
+            </thead>
+            <tbody>
+            	<tr>
+              	<td><span class="icon-16 icn-add">icn-add</span></td>
+              	<td><span class="icon-16 icn-check">icn-check</span></td>
+                <td><span class="icon-16 icn-code">icn-code</span></td>
+                <td><span class="icon-16 icn-delete">icn-delete</span></td>
+                <td><span class="icon-16 icn-download">icn-download</span></td>
+              </tr>
+              
+              <tr>  
+                <td><span class="icon-16 icn-edit">icn-edit</span></td>
+                <td><span class="icon-16 icn-email">icn-email</span></td>
+                <td><span class="icon-16 icn-help">icn-help</span></td>
+                <td><span class="icon-16 icn-home">icn-home</span></td>
+                <td><span class="icon-16 icn-attention">icn-attention</span></td>
+              </tr>
+              
+              <tr>  
+                <td><span class="icon-16 icn-less">icn-less</span></td>
+                <td><span class="icon-16 icn-user">icn-user</span></td>
+                <td><span class="icon-16 icn-close">icn-close</span></td>
+                <td><span class="icon-16 icn-file">icn-file</span></td>
+                <td><span class="icon-16 icn-file-view">icn-file-view</span></td>
+              </tr>
+              
+              <tr>
+              	<td><span class="icon-16 icn-view">icn-view</span></td>
+                <td><span class="icon-16 icn-dollar">icn-dollar</span></td>
+                <td><span class="icon-16 icn-info">icn-info</span></td>
+                <td><span class="icon-16 icn-external-link">icn-external-link</span></td>
+                <td><span class="icon-16 icn-link">icn-link</span></td>
+              </tr>
+              
+              <tr>
+              	<td><span class="icon-16 icn-incoming">icn-incoming</span></td>
+                <td><span class="icon-16 icn-outgoing">icn-outgoing</span></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+              </tr>
+            </tbody>
+          </table>
+          
+          
+          <h3>24x24</h3>
+          
+          <!-- Default 24x24 Icons -->
+          <h4>Default 24-pixel Icons</h4>
+          <p>The default 24-pixel icons use the class <code>icon-24</code> plus <code>icn-<em>iconcode</em></code>. Please refer to the list for icon codes. Example,</p>
+          <pre>&lt;span <code>class="icon-24 icn-business-verified"</code>&gt;Business Account - Verified</pre>
+          <p><span class="icon-24 icn-business-verified">Business Account - Verified</span></p>
+          <pre>&lt;span <code>class="icon-24 icn-business-verified icon-only"</code>&gt;Business Account - Verified</pre>
+          <p><span class="icon-24 icn-business-verified icon-only">Business Account - Verified</span></p>
+          <table>
+          	<thead>
+            	<tr>
+              	<th colspan="3">Default 24-pixel icons List</th>
+              </tr>
+            </thead>
+            <tbody>
+            	<tr>
+              	<td><span class="icon-24 icn-amex">icn-amex</span></td>
+                <td><span class="icon-24 icn-amex-verified">icn-amex-verified</span></td>
+                <td><span class="icon-24 icn-amex-unverified">icn-amex-unverified</span></td>
+              </tr>
+            	
+              <tr>
+              	<td><span class="icon-24 icn-business">icn-business</span></td>
+              	<td><span class="icon-24 icn-business-verified">icn-business-verified</span></td>
+              	<td><span class="icon-24 icn-business-unverified">icn-business-unverified</span></td>
+              </tr>
+              
+              <tr>
+              	<td><span class="icon-24 icn-dashboard">icn-dashboard</span></td>
+                <td><span class="icon-24 icn-manage-money">icn-manage-money</span></td>
+              	<td><span class="icon-24 icn-manage-business">icn-manage-business</span></td>
+              </tr>
+              
+              <tr>
+              	<td><span class="icon-24 icn-mc">icn-mc</span></td>
+              	<td><span class="icon-24 icn-mc-verified">icn-mc-verified</span></td>
+              	<td><span class="icon-24 icn-mc-unverified">icn-mc-unverified</span></td>
+              </tr>
+              
+              <tr>
+              	<td><span class="icon-24 icn-payza">icn-payza</span></td>
+                <td><span class="icon-24 icn-mascot">icn-mascot</span></td>
+                <td>&nbsp;</td>
+              </tr>
+              
+            	<tr>
+              	<td><span class="icon-24 icn-personal-pro">icn-personal-pro</span></td>
+              	<td><span class="icon-24 icn-personal-pro-verified">icn-personal-pro-verified</span></td>
+              	<td><span class="icon-24 icn-personal-pro-unverified">icn-personal-pro-unverified</span></td>
+              </tr>	
+              
+              <tr>
+              	<td><span class="icon-24 icn-personal-starter">icn-personal-starter</span></td>
+              	<td><span class="icon-24 icn-personal-starter-verified">icn-personal-starter-verified</span></td>
+                <td><span class="icon-24 icn-personal-starter-unverified">icn-personal-starter-unverified</span></td>
+              </tr>
+              
+            	<tr>
+              	<td>&nbsp;</td>
+              	<td><span class="icon-24 icn-transactions">icn-transactions</span></td>
+              	<td><span class="icon-24 icn-verification">icn-verification</span></td>
+							</tr>
+              
+              <tr>
+                <td><span class="icon-24 icn-visa">icn-visa</span></td>
+                <td><span class="icon-24 icn-visa-verified">icn-visa-verified</span></td>
+                <td><span class="icon-24 icn-visa-unverified">icn-visa-unverified</span></td>
+              </tr>
+              
+              <tr>
+              	<td><span class="icon-24 icn-amex-expired">icn-amex-expired</span></td>
+              	<td><span class="icon-24 icn-mc-expired">icn-mc-expired</span></td>
+              	<td><span class="icon-24 icn-visa-expired">icn-visa-expired</span></td>
+              </tr>
+            </tbody>
+          </table>
+          
+          
+          <h3>36x36</h3>
+          
+          <!-- Default 36x36 Icons -->
+          <h4>Default 36-pixel Icons</h4>
+          <p>The default 36-pixel icons use the class <code>icon-36</code> plus <code>icn-<em>iconcode</em></code>. Please refer to the list for icon codes. Example,</p>
+          <pre>&lt;span class="icon-36 icn-menu-send"&gt;Send&lt;/span&gt;</pre>
+          <p><span class="icon-36 icn-menu-send">Send</span></p>
+          <pre>&lt;span class="icon-36 icn-menu-send icon-only"&gt;Send&lt;/span&gt;</pre>
+          <p><span class="icon-36 icn-menu-send icon-only">Send</span></p>
+          <table>
+          	<thead>
+            	<tr>
+              	<th colspan="5">Default 36-pixel icons List</th>
+              </tr>
+            </thead>
+            <tbody>
+            	<tr>
+              	<td><span class="icon-36 icn-menu-add">icn-menu-add</span></td>
+                <td><span class="icon-36 icn-menu-request">icn-menu-request</span></td>
+                <td><span class="icon-36 icn-menu-send">icn-menu-send</span></td>
+                <td><span class="icon-36 icn-menu-withdraw">icn-menu-withdraw</span></td>
+                <td>&nbsp;</td>
+              </tr>
+            </tbody>
+          </table>
+          <hr />
+          
+          
+          
+          
+          
+          <!-- Containers -->
+          <h2>Containers</h2>
+          <p>Container, as the name implies, can be used to group elements such as tabular data, pagination and many others to be viewed as a whole.</p>
+          <pre>&lt;div <code>class="box"</code>&gt;
+...
+&lt;/div&gt;</pre>
+          
+          <!-- Box Table -->
+          
+          <h3>Container: Box Table</h3>
+          <p>Box Table is a container for the tabular data that allows user perform a certain action on the displayed data. Box Table could contain combinations of components in the example below. Line numbers on the right is useful to easily locate a row and are optional.</p>
+          
+          <p class="message msg-reminder"><strong>Note:</strong> Pagination form fields must be unique to its corresponding table to avoid duplicating <code>id</code>s.</p>
+          <p>A typical Box Table contains a title header (<code>h5</code>), box action (<code>ul class="box-action</code>), tabular data (<code>table</code>) and pagination. In order for the styling to take effect, do not forget to include the class <code>box-table</code> along with the class <code>box</code> in the container <code>div</code>, as in <code>&lt;div class="box box-table"&gt;</code>.</p>
+          <pre>&ltdiv <code>class="container box-table"</code>&gt;
+  <code>&lt;h5&gt;Lipsum&lt;/h5&gt;</code>
+  
+  &lt;ul <code>class="container-action"</code>&gt;
+    &lt;li class="first"&gt;&lt;a href="#"&gt;Phasellus&lt;/a&gt;&lt;/li&gt;
+    ...
+  &lt;/ul&gt;
+  
+  <code>&lt;table&gt;</code>
+    ...
+  &lt;/table&gt;
+  
+  &lt;div <code>class="pagination"</code>&gt;
+    ...
+  &lt;/div&gt;
+  
+&lt;/div&gt;</pre>
+          
+          <h4>Box Table Default</h4>
+          <div class="container box-table">
+          	<h5>Lipsum</h5>
+            <ul class="container-action">
+            	<li class="first"><a href="#">Phasellus </a></li>
+              
+              <li>
+              	<a href="#">Menu</a>
+                <ul>
+                	<li><a href="#">Vestibulum quis</a></li>
+                  <li><a href="#">Suspendisse ipsum</a></li>
+                  <li class="last"><a href="#">Phasellus viverra</a></li>
+                </ul>
+              </li>
+              
+              <li class="last">
+              	<a href="#">Another Menu</a>
+                <ul>
+                	<li><a href="#" class="icon-16 icn-download">Download</a></li>
+                  <li><a href="#" class="icon-16 icn-email">Email</a></li>
+                  <li class="last"><a href="#">Phasellus viverra</a></li>
+                </ul>
+              </li>
+            </ul>
+            
+            <table>
+            	<thead>
+              	<tr>
+                	<th>&nbsp;</th>
+                	<th title="Date"><span class="date">Date</span></th>
+                  <th title="Type"><span class="type">Type</span></th>
+                  <th title="To / From / Method"><span class="method" title="To / From / Method">To / From / Method</span></th>
+                  <th title="Status"><span class="status" title="Status">Status</span></th>
+                  <th class="cell-amount" title="Amount"><span title="Amount">Amount</span></th>
+                  <th class="cell-amount" title="Fee"><span class="fee" title="Fee">Fee</span></th>
+                  <th class="cell-amount" title="Total"><span title="Total">Total</span></th>
+                </tr>
+              </thead>
+              
+              <tbody>
+              	<tr>
+                	<td>1</td>
+                	<td><span class="date">8/16/2012</span></td>
+                  <td><a href="#" class="icon-16 icn-incoming type">Deposit</a></td>
+                  <td><span class="method" title="by Bank Wire"><em>by</em> <span class="icon-16 icn-bank-wire">Bank Wire</span></span></td>
+                  <td><span class="status status-completed" title="Completed">Completed</span></td>
+                  <td class="cell-amount"><span class="positive-amount">+ $100.00 USD</span></td>
+                  <td class="cell-amount"><em>n/a</em></td>
+                  <td class="cell-amount"><span>$100.00 USD</span></td>
+                </tr>
+                
+              	<tr>
+                	<td>2</td>
+                	<td><span class="date">8/7/2012</span></td>
+                  <td><a href="#" class="icon-16 icn-incoming type">Request (Received)</a></td>
+                  <td><span class="method" title="by Bank Transfer"><em>by</em> <span class="icon-16 icn-bank-transfer">Bank Transfer</span></span></td>
+                  <td><span class="status status-canceled" title="Canceled">Canceled</span>
+                  	<!-- Status Types
+                  	<span class="status status-completed" titl="Completed">Completed</span>
+                    <span class="status status-canceled" title="Canceled">Canceled</span>
+                    <span class="status status-chargeback" title="Chargeback">Chargeback</span>
+                    <span class="status status-declined" title="Declined">Declined</span>
+                    <span class="status status-expired" title="Expired">Expired</span>
+                    <span class="status status-failed" title="Failed">Failed</span>
+                    <span class="status status-refunded" title="Fees Refunded">Fees Refunded</span>
+                    <span class="status status-onhold" title="On hold">On hold</span>
+                    <span class="status status-pending" title="Pending">Pending</span>
+                    <span class="status status-processing" title="Processing">Processing</span>
+                    <span class="status status-returned" title="Returned">Returned</span>
+                    <span class="status status-reversed" title="Reversed">Reversed</span> -->
+                  </td>
+                  <td class="cell-amount"><span>$5.00 USD</span></td>
+                  <td class="cell-amount"><em>n/a</em></td>
+                  <td class="cell-amount"><span>$5.00 USD</span></td>
+                </tr>
+                
+              	<tr>
+                	<td>3</td>
+                	<td><span class="date">8/6/2012</span></td>
+                  <td><a href="#" class="icon-16 icn-outgoing type">Withdraw</a></td>
+                  <td><span class="method" title="by Credit Card"><em>by</em> <span class="icon-16 icn-credit-card">Credit Card</span></span></td>
+                  <td><span class="status status-completed" title="Completed">Completed</span></td>
+                  <td class="cell-amount"><span class="negative-amount">- $100.00 USD</span></td>
+                  <td class="cell-amount"><em>n/a</em></td>
+                  <td class="cell-amount"><span>$100.00 USD</span></td>
+                </tr>
+                
+              	<tr class="related-transaction first-related">
+                	<td>4</td>
+                	<td><span class="date">0/00/0000</span></td>
+                  <td><a href="#" class="icon-16 icn-outgoing type">Currency Conversion</a></td>
+                  <td><span class="to-from" title="from CDN Balance"><em>from</em> <span class="flag-16 fl-ca">CDN Balance</span></span></td>
+                  <td><span class="status status-completed" title="Completed">Completed</span></td>
+                  <td class="cell-amount"><span>$11.45 CAD</span></td>
+                  <td class="cell-amount"><em>n/a</em></td>
+                  <td class="cell-amount"><span>$11.45 CAD</span></td>
+                </tr>
+                
+              	<tr class="related-transaction">
+                	<td>5</td>
+                	<td><span class="date">0/00/0000</span></td>
+                  <td><a href="#" class="icon-16 icn-incoming type">Currency Conversion</a></td>
+                  <td><span class="to-from" title="to USD Balance"><em>to</em> <span class="flag-16 fl-us">USD Balance</span></span></td>
+                  <td><span class="status status-completed" title="Completed">Completed</span></td>
+                  <td class="cell-amount"><span>$11.35 USD</span></td>
+                  <td class="cell-amount"><em>n/a</em></td>
+                  <td class="cell-amount"><span>$11.35 USD</span></td>
+                </tr>
+                
+              	<tr class="related-transaction last-related">
+                	<td>6</td>
+                	<td><span class="date">0/00/0000</span></td>
+                  <td><a href="#" class="icon-16 icn-incoming type">Transfer (Received)</a></td>
+                  <td>
+                  	<ul class="to-from-info">
+                    	<li title="Jane Doe"><em>from</em> <span class="icon-16 icn-user">Jane Doe</span></li>
+                      <li title="jane.doe@email.com"><span class="icon-16 icn-email">jane.doe@email.com</span></li>
+                    </ul>
+                  </td>
+                  <td><span class="status status-completed" title="Completed">Completed</span></td>
+                  <td class="cell-amount"><span>$12.00 CAD</span></td>
+                  <td class="cell-amount"><span>$0.55 CAD</span></td>
+                  <td class="cell-amount"><span>$11.45 CAD</span></td>
+                </tr>
+                
+              	<tr>
+                	<td>7</td>
+                	<td><span class="date">8/16/2012</span></td>
+                  <td><a href="#" class="icon-16 icn-incoming type">Deposit</a></td>
+                  <td><span class="method" title="by Check / Money Order"><em>by</em> <span class="icon-16 icn-check-money-order">Check / Money Order</span></span></td>
+                  <td><span class="status status-completed" title="Completed">Completed</span></td>
+                  <td class="cell-amount"><span>$100.00 USD</span></td>
+                  <td class="cell-amount"><em>n/a</em></td>
+                  <td class="cell-amount"><span>$100.00 USD</span></td>
+                </tr>
+                
+              	<tr>
+                	<td>8</td>
+                	<td><span class="date">8/16/2012</span></td>
+                  <td><a href="#" class="icon-16 icn-incoming type">Deposit</a></td>
+                  <td><span class="method" title="by Prepaid Card"><em>by</em> <span class="icon-16 icn-prepaid-card">Prepaid Card</span></span></td>
+                  <td><span class="status status-completed" title="Completed">Completed</span></td>
+                  <td class="cell-amount"><span>$100.00 USD</span></td>
+                  <td class="cell-amount"><em>n/a</em></td>
+                  <td class="cell-amount"><span>$100.00 USD</span></td>
+                </tr>
+                
+              	<tr>
+                	<td>9</td>
+                	<td><span class="date">0/00/0000</span></td>
+                  <td><a href="#" class="icon-16 icn-incoming type">Transfer (Received)</a></td>
+                  <td>
+                  	<ul class="to-from-info">
+                      <li title="jane.doe@email.com"><em>from</em> <span class="icon-16 icn-email" title="james.doe@email.com">james.doe@email.com</span></li>
+                    </ul>
+                  </td>
+                  <td><span class="status status-completed" title="Completed">Completed</span></td>
+                  <td class="cell-amount"><span>$12.00 CAD</span></td>
+                  <td class="cell-amount"><span class="fee">$0.55 CAD</span></td>
+                  <td class="cell-amount"><span>$11.45 CAD</span></td>
+                </tr>
+              </tbody>
+            </table>
+            
+						<div class="pagination">
+              <ul class="page-list">
+                  <li class="first"><a href="#" title="First">First</a></li>
+                  <li><a href="#" title="Previous">Previous</a></li>
+                  <li><a class="selected" title="Selected Page">21</a></li>
+                  <li><a href="#">22</a></li>
+                  <li><a href="#">23</a></li>
+                  <li><a href="#">24</a></li>
+                  <li><a href="#">25</a></li>
+                  <li ><a href="#" title="Next">Next</a></li>
+                  <li class="last"><a href="#" title="Last">Last</a></li>
+              </ul>
+                        
+              <fieldset class="rows-perpage">
+                  <legend>Rows per page Form</legend>
+                  <div class="field">
+                    <label for="rows_perpage">Rows per page</label>
+                    <select id="rows_perpage" name="rows_perpage">
+                        <option>10</option>
+                        <option>20</option>
+                        <option>30</option>
+                        <option>40</option>
+                        <option>50</option>
+                    </select>
+                  </div>
+              </fieldset>
+              
+              <ul class="page-counter">
+              	<li>
+                  <span class="label">Page</span>
+                  <span class="value">0000/0000</span>
+                </li>
+                
+              	<li>
+                  <span class="label">Items</span>
+                  <span class="value">0000-0000/0000</span>
+                </li>
+              </ul>
+
+              <fieldset class="goto-page">
+                  <legend>Go to Page Form</legend>
+                  <div class="field">
+                    <label for="goto_page1">Go to page</label>
+                    <input type="text" id="goto_page1" name="goto_page" />
+                    <input type="button" value="Go" class="btn" />
+                  </div>
+              </fieldset>
+            </div>            
+          </div>
+          
+          <hr />
+          
+          <h4>Box Table Default with row-level menu</h4>
+          <p>Row-level menu is displayed on row mouseover. It is especially useful for space-constrained tables that require row-level action.</p>
+          <p>The <code>class="row-action"</code> on the table cells are the indicators of the row-level menu and they activate its behavior. In order for it take effect, the <code>tbody td</code> that has <code>class="row-action"</code> should always contain a list (<code>ul</code>) of the action menu. Refer to the example below.</p>
+          <pre>...
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;th&gt;Name&lt;/th&gt;
+    ...
+    &lt;th <code>class="row-action"</code>&gt;&amp;nbsp;&lt;/th&gt;
+  &lt;/thead&gt;
+  
+  &lt;tbody&gt;
+    &lt;td&gt;Button1&lt;/td&gt;
+    ...
+    &lt;td <code>class="row-action"</code>&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#" class="icon-16 icn-code" title="View Code"&gt;View Code&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#" class="icon-16 icn-edit" title="Edit"&gt;Edit&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#" class="icon-16 icn-delete" title="Delete"&gt;Delete&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/td&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+...</pre>
+          
+          <table class="fancy-table" id="without_line_numbers">
+          	<caption>This is the table caption.</caption>
+          	<thead>
+            	<tr>
+              	<th>Email</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Department</th>
+                <th>Title</th>
+              </tr>
+            </thead>
+            
+            <!--<tfoot>
+            	<tr>
+              	<td colspan="5">This is the table footer.</td>
+              </tr>
+            </tfoot>-->
+            
+            <tbody>
+            	<tr>
+              	<td><a href="#" title="RandriamangasonHajanavalona@email.com">RandriamangasonHajanavalona@email.com</a></td>
+                <td>Randriamangason</td>
+                <td>Hajanavalona</td>
+                <td>Research and Development</td>
+                <td>Software Developer</td>
+              </tr>
+              
+            	<tr>
+              	<td><a href="#">xavier@payza.com</a></td>
+                <td>Xavier</td>
+                <td>Francis</td>
+                <td>Research and Development</td>
+                <td>Team Leader - Business Analyst &amp; Agile Coach-SomeExtraStringsToMakeItEvenLonger</td>
+              </tr>
+              
+            	<tr>
+              	<td>Content 1</td>
+                <td>Content 2</td>
+                <td>Content 3</td>
+                <td>Content 4</td>
+                <td>Content 5</td>
+              </tr>
+            </tbody>
+          </table>
+		  
+		  
+          <div class="container box-table">
+          	<h5>Fancy Table with line numbers</h5>
+            <ul class="container-action">
+            	<li class="first"><a href="#">Phasellus </a></li>
+              
+			  <li>
+				<a href="#">Menu</a>
+				<ul>
+					<li><a href="#">Vestibulum quis</a></li>
+				  <li><a href="#">Suspendisse ipsum</a></li>
+				  <li class="last"><a href="#">Phasellus viverra</a></li>
+				</ul>
+			  </li>
+			
+            	<li><a href="#" class="icon-16 icn-add">Add Buy Now Button</a></li>
+            </ul>
+            <table class="fancy-table" id="with_line_numbers">
+            	<thead>
+              	<tr>
+                	<th>Name</th>
+                  <th>Item Code</th>
+                  <th>Type</th>
+                  <th class="cell-amount">Amount</th>
+                  <th>Something</th>
+				  <th>Another Column Header</th>
+				  <!--<th class="row-action">&nbsp;</th>-->
+                </tr>
+              </thead>
+              
+              <tbody>
+              	<tr>
+                  <td>Mauris massa sem, mollis sagittis vehicula quis Lorem ipsum dolor sit amet</td>
+                  <td>Lorem ipsum dolor sit amet</td>
+                  <td>Mauris massa sem, mollis sagittis vehicula quis Lorem ipsum dolor sit amet</td>
+                  <td>Lorem ipsum dolor sit amet</td>
+				  <td>Mauris massa sem, mollis sagittis vehicula quis Lorem ipsum dolor sit amet</td>
+				  <td><a href="#">Lorem ipsum dolor sit amet</a></td>
+                  <!--<td class="row-action">
+                  	<ul>
+                    	<li><a href="#" class="icon-16 icn-code" title="View Code">View Code</a></li>
+                      <li><a href="#" class="icon-16 icn-edit" title="Edit">Edit</a></li>
+                      <li><a href="#" class="icon-16 icn-delete" title="Delete">Delete</a></li>
+                    </ul>
+                  </td>-->
+                </tr>
+                
+              	<tr>
+                  <td>Mauris massa sem</td>
+                  <td>Lorem ipsum dolor sit amet</td>
+                  <td>Mauris sagittis sit amet</td>
+                  <td>Lorem ipsum </td>
+				  <td>Mauris massa sem, mollis sagittis vehicula quis Lorem ipsum dolor sit amet</td>
+				  <td><a href="#">Lorem ipsum dolor sit amet</a></td>
+                  <!--<td class="row-action">
+                  	<ul>
+                      <li><a href="#" class="icon-16 icn-code" title="View Code">View Code</a></li>
+                      <li><a href="#" class="icon-16 icn-edit" title="Edit">Edit</a></li>
+                      <li><a href="#" class="icon-16 icn-delete" title="Delete">Delete</a></li>
+                    </ul>
+                  </td>-->
+                </tr>
+                
+              	<tr>
+                  <td>Mauris massa sem, mollis sagittis vehicula quis Lorem ipsum dolor sit amet</td>
+                  <td>Lorem ipsum dolor sit amet</td>
+                  <td>Mauris massa sem, mollis sagittis vehicula quis Lorem ipsum dolor sit amet</td>
+                  <td>Lorem ipsum dolor sit amet</td>
+				  <td>Mauris massa sem, mollis sagittis</td>
+				  <td><a href="#">Lorem ipsum dolor sit amet</a></td>
+                  <!--<td class="row-action">
+                  	<ul>
+                    	<li><a href="#" class="icon-16 icn-code" title="View Code">View Code</a></li>
+                      <li><a href="#" class="icon-16 icn-edit" title="Edit">Edit</a></li>
+                      <li><a href="#" class="icon-16 icn-delete" title="Delete">Delete</a></li>
+                    </ul>
+                  </td>-->
+                </tr>
+              </tbody>
+            </table>
+            
+						<div class="pagination">
+              <ul class="page-list">
+                  <li class="first"><a href="#" title="First">First</a></li>
+                  <li><a href="#" title="Previous">Previous</a></li>
+                  <li><a class="selected" title="Selected Page">21</a></li>
+                  <li><a href="#">22</a></li>
+                  <li><a href="#">23</a></li>
+                  <li><a href="#">24</a></li>
+                  <li><a href="#">25</a></li>
+                  <li ><a href="#" title="Next">Next</a></li>
+                  <li class="last"><a href="#" title="Last">Last</a></li>
+              </ul>
+                        
+              <fieldset class="rows-perpage">
+                  <legend>Rows per page Form</legend>
+                  <div class="field">
+                    <label for="rows_perpage1">Rows per page</label>
+                    <select id="rows_perpage1" name="rows_perpage">
+                        <option>10</option>
+                        <option>20</option>
+                        <option>30</option>
+                        <option>40</option>
+                        <option>50</option>
+                    </select>
+                  </div>
+              </fieldset>
+              
+              <ul class="page-counter">
+              	<li>
+                  <span class="label">Page</span>
+                  <span class="value">0000/0000</span>
+                </li>
+                
+              	<li>
+                  <span class="label">Items</span>
+                  <span class="value">0000-0000/0000</span>
+                </li>
+              </ul>
+
+              <fieldset class="goto-page">
+                  <legend>Go to Page Form</legend>
+                  <div class="field">
+                    <label for="goto_page11">Go to page</label>
+                    <input type="text" id="goto_page11" name="goto_page" />
+                    <input type="button" value="Go" class="btn" />
+                  </div>
+              </fieldset>
+            </div>            
+          </div>
+          
+          
+          <hr />
+          
+          <h3>Container: List Group</h3>
+          <p>List group is another type of container. It can be used as an alternative to the Box Table, which has flexibility limitations (horizontal).</p>
+          
+          <div class="container list-group">
+          	<h5>Credit Cards</h5>
+            <!-- Only display "box-action" list when the limit number of credit cards has not yet been reached. Limit is 3 credit cards. -->
+            <ul class="container-action">
+            	<li class="first">
+              	<a href="#">Menu</a>
+                <ul>
+                	<li><a href="#">Sub-menu 1</a></li>
+                  <li><a href="#">Sub-menu 2</a></li>
+                  <li class="last"><a href="#">Sub-menu 3</a></li>
+                </ul>
+              </li>
+            	<li class="last"><a href="#" class="icon-16 icn-add">Add Credit Card</a></li>
+            </ul>
+            
+            <div class="list-container clearfix">
+            	<div class="list-item">
+              	<ul class="list-action">
+                  <li class="first"><a href="#" class="icon-16 icn-edit">Edit</a></li>
+                  <li class="last"><a href="#" class="icon-16 icn-delete">Remove</a></li>
+                </ul>
+                
+                <div class="item-details">
+                	<dl class="card-info">
+                  	<dt>Card Type</dt>
+                    <dd class="card-type"><a class="icon-24 icn-visa-verified" href="#">****-****-****-4467</a></dd>
+                    
+                    <dt>Card Status</dt>
+                    <dd class="card-status"><em>Validated</em></dd>
+                  </dl>
+                	
+                  <div class="card-limit">
+                    <h6>Monthly Limit</h6>
+                    <dl class="clearfix">
+                      <dt>Used</dt>
+                      <dd>$0.00 USD</dd>
+                      
+                      <dt>Remaining</dt>
+                      <dd>$1,000.00 USD</dd>
+                      
+                      <dt class="last">Total</dt>
+                      <dd class="last">$1,000.00 USD</dd>
+                    </dl>
+                  </div>
+                  
+                  <div class="card-documents">
+                  	<h6>Submitted Documents</h6>
+                    <ul>
+                    	<li class="first"><a href="#">Document 1</a></li>
+                      <li class="last"><a href="#">Document 2</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              
+              
+            	<div class="list-item">
+              	<ul class="list-action">
+                	<li class="first"><a href="#" class="icon-16 icn-file">Submit a document</a></li>
+                  <li><a href="#" class="icon-16 icn-edit">Edit</a></li>
+                  <li class="last"><a href="#" class="icon-16 icn-delete">Remove</a></li>
+                </ul>
+                
+                <div class="item-details">
+                	<dl class="card-info">
+                  	<dt>Card Type</dt>
+                    <dd class="card-type"><a href="#" class="icon-24 icn-mc-unverified">****-****-****-5222</a></dd>
+                    
+                    <dt>Card Status</dt>
+                    <dd class="card-status"><em>Not validated</em> <a href="#" class="btn-link">Validate card</a></dd>
+                  </dl>
+                	
+                  <div class="card-limit">
+                    <h6>Monthly Limit</h6>
+                    <dl class="clearfix">
+                      <dt>Used</dt>
+                      <dd>$0.00 USD</dd>
+                      
+                      <dt>Remaining</dt>
+                      <dd>$1,000.00 USD</dd>
+                      
+                      <dt class="last">Total</dt>
+                      <dd class="last">$1,000.00 USD</dd>
+                    </dl>
+                  </div>
+                  
+                  <div class="card-documents">
+                  	<h6>Submitted Documents</h6>
+                    <ul>
+                    	<li class="first"><a href="#">Document 1</a></li>
+                      <li class="last"><a href="#">Document 2</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              
+              
+              <div class="list-item">
+              	<ul class="list-action">
+                  <li class="last"><a href="#" class="icon-16 icn-delete">Remove</a></li>
+                </ul>
+                
+                <div class="item-details">
+                	<dl class="card-info">
+                  	<dt>Card Type</dt>
+                    <dd class="card-type"><a href="#" class="icon-24 icn-amex-expired">****-****-****-0595</a></dd>
+                    
+                    <dt>Card Status</dt>
+                    <dd class="card-status"><span class="tooltip" title="This credit card has expired."><strong>Expired</strong></span></dd>
+                  </dl>
+                	
+                  <div class="card-limit">
+                    <h6>Monthly Limit</h6>
+                    <dl class="clearfix">
+                      <dt>Used</dt>
+                      <dd>$0.00 USD</dd>
+                      
+                      <dt>Remaining</dt>
+                      <dd>$1,000.00 USD</dd>
+                      
+                      <dt class="last">Total</dt>
+                      <dd class="last">$1,000.00 USD</dd>
+                    </dl>
+                  </div>
+                  
+                  <div class="card-documents">
+                  	<h6>Submitted Documents</h6>
+                    <p><em>You have not submitted any document.</em> <a href="#">Submit a document.</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+						<div class="pagination">
+              <ul class="page-list">
+                  <li class="first"><a href="#" title="First">First</a></li>
+                  <li><a href="#" title="Previous">Previous</a></li>
+                  <li><a class="selected" title="Selected Page">21</a></li>
+                  <li><a href="#">22</a></li>
+                  <li><a href="#">23</a></li>
+                  <li><a href="#">24</a></li>
+                  <li><a href="#">25</a></li>
+                  <li ><a href="#" title="Next">Next</a></li>
+                  <li class="last"><a href="#" title="Last">Last</a></li>
+              </ul>
+                        
+              <fieldset class="rows-perpage">
+                  <legend>Rows per page Form</legend>
+                  <div class="field">
+                    <label for="rows_perpage1">Rows per page</label>
+                    <select id="rows_perpage1" name="rows_perpage">
+                        <option>10</option>
+                        <option>20</option>
+                        <option>30</option>
+                        <option>40</option>
+                        <option>50</option>
+                    </select>
+                  </div>
+              </fieldset>
+              
+              <ul class="page-counter">
+              	<li>
+                  <span class="label">Page</span>
+                  <span class="value">0000/0000</span>
+                </li>
+                
+              	<li>
+                  <span class="label">Items</span>
+                  <span class="value">0000-0000/0000</span>
+                </li>
+              </ul>
+
+              <fieldset class="goto-page">
+                  <legend>Go to Page Form</legend>
+                  <div class="field">
+                    <label for="goto_page11">Go to page</label>
+                    <input type="text" id="goto_page11" name="goto_page" />
+                    <input type="button" value="Go" class="btn" />
+                  </div>
+              </fieldset>
+            </div>            
+            
+          </div>
+          
+          
+          
+          
+          <hr />
+          
+          
+          
+          <h2>Tabs</h2>
+          <p>Tabs are very useful when presenting information coherently in a space-limited environment.</p>
+          
+          <h3>Modular Tabs</h3>
+          <p>Modular Tabs allow users to view information on each panel without refreshing the page. Do not use Modular Tabs if the content inside each panel would function well in its own separate page. For example, when a page requires a menu navigation (especially multi-level menu). In such case, one of the Navigation Tabs types may be a more appropriate choice.</p>
+          <div class="tabs">
+          	<ul class="tabs-navigation">
+            	<li><a href="#tab1">Tab 1</a></li>
+              <li><a href="#tab2">Tab 2</a></li>
+              <li><a href="#tab3">Tab 3</a></li>
+            </ul>
+            
+            <div id="tab1" class="tabs-panel">
+            	<h1>Tab 1</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque non tortor velit, dignissim rutrum libero. Quisque laoreet iaculis ligula, at fringilla eros rutrum id.</p>
+            </div>
+            
+            <div id="tab2" class="tabs-panel">
+            	<h1>Tab 2</h1>
+              <p>Integer et mi non metus ornare consectetur volutpat a augue. Aenean vitae nisl elit. Donec ut neque ligula, ac auctor urna.</p>
+            </div>
+            
+            <div id="tab3" class="tabs-panel">
+            	<h1>Tab 3</h1>
+              <p>Sed magna ipsum, laoreet vitae tempor eu, sagittis in dolor. In hac habitasse platea dictumst. Curabitur condimentum, metus in bibendum malesuada, metus nibh posuere orci, sit amet euismod nulla elit sed justo.</p>
+            </div>
+          </div>
+          
+          
+          <hr />
+          
+          <h3>Navigation Tabs</h3>
+          <p>Navigation Tabs is a type of navigation that is aesthetically similar to the Modular Tabs menu. The slight difference is the absence of the panels. Navigation Tabs do not have panels (to house contents) but rather each tab, sub-item and sub-sub-item corresponds to a page.</p>
+          
+          <h4>Menu Tabs</h4>
+          <p>Menu Tabs can used for a 2- or 3-level menu (maximum 3 levels). Sub-items are revealed upon the tab's corresponding page load.</p>
+          <p class="message msg-reminder"><strong>Note:</strong> The number of sub-items that will fit in the default layout depends on the length of each sub-item's text. Consider the narrow layout when naming the sub-items.</p>
+					<div class="menu-tabs">
+          	<ul class="with-sub-level"><!-- The list acquires the class "with-sub-level" when there are sub-items included, to adjust the height of the whole navigation. -->
+            	<li><a href="#">Tab 1</a></li>
+              <li><a href="#">Tab 2</a></li>
+              <li class="selected">
+              	<a href="#">Tab 3</a>
+                <ul>
+                	<li><a href="#">Sub-item 1</a></li>
+                  <li><a href="#">Sub-item 2</a></li>
+                  <li><a href="#">Sub-item 3</a></li>
+                  <li>
+                  	<a href="#">Sub-item 4</a>
+                    <ul>
+                      <li class="first"><a href="#">Sub-sub-item 1</a></li>
+                      <li><a href="#">Sub-sub-item 2</a></li>
+                      <li><a href="#">Sub-sub-item 3</a></li>
+                      <li><a href="#">Sub-sub-item 4</a></li>
+                      <li class="last"><a href="#">Sub-sub-item 5</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                  	<a href="#">Sub-item 5</a>
+                    <ul>
+                      <li class="first"><a href="#">Sub-sub-item 1</a></li>
+                      <li><a href="#">Sub-sub-item 2</a></li>
+                      <li><a href="#">Sub-sub-item 3</a></li>
+                      <li><a href="#">Sub-sub-item 4</a></li>
+                      <li class="last"><a href="#">Sub-sub-item 5</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <h1>Tab 3</h1>
+          <p>Tab 3 content goes here.</p>
+          <hr />
+          
+          
+          <h4>Quick Menu Tabs</h4>
+          <p>Quick Menu Tabs is another type of tab navigation that can accommodate up to 2-level menu. Compared to the Menu Tabs, Quick Menu Tabs allow users to view the menu sub-items on mouseover and navigate between items quickly.</p>
+          <div class="quick-menu-tabs">
+          	<ul>
+            	<li><a href="#">Tab 1</a></li>
+              <li class="selected">
+              	<a href="#">Tab 2</a>
+                <ul>
+                	<li class="first"><a href="#">Sub-item 1</a></li>
+                  <li><a href="#">Sub-item 2</a></li>
+                  <li class="last"><a href="#">Sub-item 3</a></li>
+                </ul>
+              </li>
+              <li>
+              	<a href="#">Tab 3</a>
+                <ul>
+                	<li class="first"><a href="#">Sub-item 1</a></li>
+                  <li><a href="#">Sub-item 2</a></li>
+                  <li class="last"><a href="#">Sub-item 3</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <h1>Tab 2</h1>
+          <p>Tab 2 content goes here.</p>
+          <hr />
+          
+          
+          <!-- Accordion -->
+          <h3>Accordion</h3>
+          <p>Accordion is another type of container that allows users to navigate between sections of information quickly without refreshing the page.</p>
+          
+          <div class="accordion">
+          	<div class="accordion-panel first">
+            	<h5>Panel 1</h5>
+              <div class="accordion-content">
+                <p>Donec tincidunt libero et mauris facilisis luctus. Donec adipiscing tempor condimentum. Suspendisse ultrices, tellus vel eleifend consectetur, augue erat molestie mauris, laoreet mollis risus lectus nec massa. Mauris sed libero nunc.</p>
+              </div>
+            </div>
+            
+          	<div class="accordion-panel">
+            	<h5>Panel 2</h5>
+              <div class="accordion-content">
+                <p>Donec volutpat felis vitae lectus molestie porttitor. Donec sed purus risus, nec volutpat erat. Cras feugiat tellus nec neque rutrum ac vestibulum sem pulvinar.</p>
+              </div>
+            </div>
+            
+          	<div class="accordion-panel last">
+            	<h5>Panel 3</h5>
+              <div class="accordion-content">
+                <p>hasellus ut felis eget orci rhoncus luctus vitae in nisi. Curabitur sodales, arcu at congue mollis, orci lorem hendrerit nisl, et facilisis velit massa vitae nunc.</p>
+              </div>
+            </div>
+          </div>
+            
+         
+          <hr />
+          
+          <h3>Simple Show / Hide plugin called <em>more-less</em></h3>
+          <p>The <em>more-less</em> plugin is used to show / hide part of a block of content. The plugin can be activated by attaching the <code>moreLess()</code> plug-in to an element or a block of elements. Refer to the examples below:</p>
+          <h4>Text Block with more-less</h4>
+          <p>One simple usage of the <code>.moreLess()</code> plug-in is using in a block of text in a paragraph.</p>
+       		<pre>&lt;p class="sample-text"&gt;Lorem ipsum dolor sit amet ...&lt;/p&gt;
+...
+$(".sample-text").moreLess();</pre>   
+          <p class="sample-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque non tortor velit, dignissim rutrum libero. Quisque laoreet iaculis ligula, at fringilla eros rutrum id. Integer et mi non metus ornare consectetur volutpat a augue. Aenean vitae nisl elit. Donec ut neque ligula, ac auctor urna. Sed magna ipsum, laoreet vitae tempor eu, sagittis in dolor. In hac habitasse platea dictumst. Curabitur condimentum, metus in bibendum malesuada, metus nibh posuere orci, sit amet euismod nulla elit sed justo. Donec tincidunt libero et mauris facilisis luctus. Donec adipiscing tempor condimentum. Suspendisse ultrices, tellus vel eleifend consectetur, augue erat molestie mauris, laoreet mollis risus lectus nec massa. Mauris sed libero nunc. Integer vitae posuere eros. Pellentesque gravida ligula rutrum velit aliquam rhoncus. Vivamus hendrerit massa sed sapien ullamcorper adipiscing sed sed ante. Donec volutpat felis vitae lectus molestie porttitor. Donec sed purus risus, nec volutpat erat. Cras feugiat tellus nec neque rutrum ac vestibulum sem pulvinar. Phasellus ut felis eget orci rhoncus luctus vitae in nisi. Curabitur sodales, arcu at congue mollis, orci lorem hendrerit nisl, et facilisis velit massa vitae nunc. Vestibulum aliquam neque ac libero accumsan at tempor dolor mattis. Suspendisse potenti. Fusce placerat massa vitae sapien feugiat vulputate. Fusce dolor neque, eleifend hendrerit interdum tempus, pretium eu lorem. Maecenas ultricies, quam sed tristique blandit, tortor mi adipiscing diam, vel fringilla tortor sapien quis felis. In hendrerit lorem et mauris placerat ac venenatis purus posuere. Duis nec risus orci. Morbi sit amet rutrum diam. </p>
+           
+          <h4>Box Form with more-less</h4>
+          <p>Similarly, the <code>moreLess()</code> plug-in can also be used to show / hide parts of a form. A good example is the "Advanced Search" feature that can mostly be found in a search driven application. The <code>moreLess()</code> plug-in can be customized to suit one's needs. Please refer to the plug-in script for customization settings.</p>
+          <pre>&lt;div class="box box-form"&gt;
+&lt;fieldset&gt;
+---
+&lt;div <code>class="dispute-search"</code>&gt;
+  &lt;div class="field"&gt;
+  ---
+  &lt;/div&gt;
+&lt;/div&gt;
+---
+&lt;/fieldset&gt;
+...
+$(".dispute-search").moreLess({
+  'minHeight': '78px',     // The height of the box when content is clipped.
+  'textMore': 'Show Advanced Search',  // Text when box content is collapsed.
+  'textLess': 'Hide Advanced Search',  // Text when box content is expanded.
+  'titleMore': 'Show Advanced Search', // Title attribute of the collapsed icon.
+  'titleLess': 'Hide Advanced Search' // Title attribute of the expanded icon.
+});</pre>
+          
+          <div class="container box-form">
+            <fieldset>
+              <legend>Choose a transaction to dispute.</legend>
+              <div class="dispute-search">
+                <div class="field">
+                  <div class="field-item">
+                    <label for="seller_email">Seller's Email</label>
+                    <input type="text" id="seller_email" />
+                  </div>
+                  
+                  <div class="field-item">
+                    <label for="seller_name">Seller's Name</label>
+                    <input type="text" id="seller_name" />
+                  </div>
+                  
+                  <div class="field-item">
+                    <label for="reference_number">Reference Number</label>
+                    <input type="text" id="reference_number" />
+                  </div>
+                </div>
+                
+                
+                <div class="field">
+                  <span class="label">Advanced Options</span>
+                  <div class="field-item">
+                    <label for="amount">Amount</label>
+                    <input type="text" id="amount" />
+                  </div>
+                                    
+                  <div class="field-item">
+                    <label for="date">Date</label>
+                    <input type="text" id="date" />
+                  </div>
+                </div>
+                
+                <div class="field">
+                  <div class="field-item">
+                    <label for="trans_type">Transaction Type</label>
+                    <select id="trans_type">
+                      <option>Type 1</option>
+                      <option>Type 2</option>
+                      <option>Type 3</option>
+                    </select>
+                  </div>
+                  
+                  <div class="field-item">
+                    <label for="purchase_type">Purchase Type</label>
+                    <select id="purchase_type">
+                      <option>Type 1</option>
+                      <option>Type 2</option>
+                      <option>Type 3</option>
+                    </select>
+                  </div>
+                  
+                  <div class="field-item">
+                    <label for="currency">Currency</label>
+                    <select id="currency">
+                      <option>Currency 1</option>
+                      <option>Currency 2</option>
+                      <option>Currency 3</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="field button-field">
+                <input type="submit" value="Search" />
+              </div>
+            </fieldset>
+          </div>
+           
+           
+           
+          <hr /> 
+          
+          
+          <!-- Tooltip -->
+          <h3>Tooltip</h3>
+          <p>The tooltip can be used with the <code>abbr</code> tag or with any element with <code>class="tooltip"</code> to display a bubble-type of information on mouseover. The tooltip uses the <code>title</code> attribute as the text value of the tip box. Therefore it is necessary to include the <code>title</code> attribute in order for the plug-in to work properly. Otherwise, the tip box will be empty.</p>
+          <p>This is a sample tooltip using the <code>abbr</code> tag: What is <abbr title="Hypertext Markup Language">HTML</abbr>?</p>
+          <pre>&lt;p&gt;What is <code>&lt;abbr title="Hypertext Markup Language"&gt;HTML&lt;/abbr&gt;?</code>&lt;/p&gt;</pre>
+          <p>This is a sample tooltip using <code>class="tooltip"</code>: What is a <span title="A tooltip is plugin to display information." class="tooltip">tooltip</span>?</p>
+          <pre>&lt;p&gt;What is a &lt;span title="A tooltip is plugin to display information." <code>class="tooltip"</code>&gt;tooltip&lt;/span&gt;?&lt;/p&gt;</pre>
+		  
+		  
+		  <hr />
+		  
+		  <!-- Notably -->
+		  <h3>Notably</h3>
+		  <p>Notably is another type of plugin that can be used to "pop-up" information. The difference between notably and tooltip is the type of content they can handle and the event they are initiated. Notably can handle a chuck of text contents while tooltip can only handle a single-phrase or short information.</p>
+		  
+		  <p>This is a default example of notably. This is some information on <span class="notably sample-notable-default">how to use notably</span>.</p>
+		  <div class="notable-content notable-default">
+			<h4>Default: Aenean eleifend eros eget nibh</h4>
+			<p>Cras vestibulum vehicula purus, nec iaculis orci aliquet quis. Quisque ut sem quam, ultricies pharetra ipsum. Sed egestas elit vitae nisi porta elementum vel nec massa. Curabitur blandit lacus sit amet mauris pharetra et commodo massa ullamcorper.</p>
+		  </div>
+		  
+		  <p>This notably is open when the page loads. This is some information on <span class="notably sample-notable-open">how to use notably</span>.</p>
+		  <div class="notable-content notable-open">
+			<h4>Open: Aenean eleifend eros eget nibh</h4>
+			<p>Cras vestibulum vehicula purus, nec iaculis orci aliquet quis. Quisque ut sem quam, ultricies pharetra ipsum. Sed egestas elit vitae nisi porta elementum vel nec massa. Curabitur blandit lacus sit amet mauris pharetra et commodo massa ullamcorper.</p>
+		  </div>
+		  
+        </div>
+		</div>
+    
+    
+    
+		<div class="content">
+    	<div class="breadcrumbs">
+      	<ul class="clearfix">
+        	<li class="first"><a href="#" class="icon-16 icn-home icon-only">Home</a></li>
+          <li><a href="#">Category</a></li>
+          <li><a href="#">Sub-category</a></li>
+          <li class="last">Sub-sub-category</li>
+        </ul>
+      </div>
+    	
+      <div class="main-side right-split">
+        <div class="main-content">
+        
+          <!-- All forms must be formatted, by default, this way in order to inherit the default styling of the form elements. 
+               Should there be any modification / adjustment in the default format, do so as you see fit but keeping and maintaining the consistency of the look and feel and the flow of the elements. 
+               Any adjustments in the form elements should attributed to the class attached to the fieldset. 
+               Width adjustments must be in percentage (%) so that it will degrade gracefully on window resize. -->
+          <h2>Form</h2>
+          <p>Form elements should be enclosed within a <code>fieldset</code> and be formatted according to the specifications here in order to inherit the defined style.</p>
+          <fieldset>
+            <legend>This is a form legend. This could be a brief summary of what the form is about.</legend>
+            
+            <!-- Formatting for single text, password, select, textarea fields. -->
+            <div class="field field-message">
+              <label for="item1">Single text input <em class="optional">(Optional)</em></label>
+              <span class="field-help"><span class="icon-16 icn-help">This is some help description.</span></span>
+              <input type="text" id="item1" />
+			  <span class="message-type message-important"><span class="message-label">Important</span> <span class="message-value">This is some important reminder, short and consise.</span></span>
+            </div>
+            
+            <div class="field">
+              <label for="item2">Item 2 <em class="required">(Required)</em></label>
+              <input type="password" id="item2" />
+			  
+			  <div class="field-notably notable-in-form">
+				<h4>Open: Aenean eleifend eros eget nibh</h4>
+				<p>Cras vestibulum vehicula purus, nec iaculis orci aliquet quis. Quisque ut sem quam, ultricies pharetra ipsum. Sed egestas elit vitae nisi porta elementum vel nec massa. Curabitur blandit lacus sit amet mauris pharetra et commodo massa ullamcorper.</p>
+			  </div>
+            </div>
+            
+            <div class="field field-message field-error">
+              <label for="item3">Item 3</label>
+              <select id="item3">
+                <option>Option 1</option>
+                <option>Option 2</option>
+                <option>Option 3</option>
+              </select>
+			  <span class="message-type message-error"><span class="message-label">Error</span> <span class="message-value">This is some error message.</span></span>
+            </div>
+            
+            <div class="field">
+              <label for="item4">Item 4</label>
+              <span class="field-help"><span class="icon-16 icn-help">This is another help description.</span></span>
+              <textarea id="item4"></textarea>
+            </div>
+            
+            <div class="field">
+            	<label for="item5">Item 5</label>
+              <input type="file" id="item5" />
+            </div>
+            
+			<h4>The Field's Value is provided</h4>
+            <div class="field">
+            	<span class="label">Sender</span>
+                <span class="value">Jane Smith &mdash; <em>jane.smith@email.com</em></span>
+            </div>
+            
+            <!-- HTML5 Form Elements: rendition differs on browsers. -->
+            <hr />
+            <h4>HTML5 Form Elements</h4>
+            <p><strong>Note:</strong> Not all browsers have full support on these new HTML5 form elements.</p>
+            <div class="field">
+            	<label for="date">Date</label>
+            	<input type="date" id="date" /><!-- Not supported FF11, IE9 and below -->
+            </div>
+            
+            <div class="field">
+            	<label for="date_time">Date time</label>
+            	<input type="datetime" id="date_time" /><!-- Supported ONLY in Opera & Safari -->
+            </div>
+            
+            <div class="field">
+            	<label for="date_time_local">Date time Local</label>
+            	<input type="datetime-local" id="date_time_local" /><!-- Supported ONLY in Opera & Safari -->
+            </div>
+            
+            <div class="field">
+            	<label for="email">Email</label>
+            	<input type="email" id="email" /><!-- Not supported in IE9 and below -->
+            </div>
+            
+            <div class="field">
+            	<label for="month">Month</label>
+            	<input type="month" id="month" /><!-- Supported ONLY in Opera & Safari -->
+            </div>
+            
+            <div class="field">
+            	<label for="number">Number</label>
+            	<input type="number" id="number" /><!-- Supported ONLY in Chrome, Opera & Safari -->
+            </div>
+            
+            <div class="field">
+            	<label for="range">Range</label>
+            	<input type="range" id="range" />
+            </div>
+            
+            
+            
+            
+            <!-- Formatting for multiple or combined text, password, select, textarea fields. -->
+            <hr />
+            <h4>Multiple elements</h4>
+            
+            <div class="field field-message field-error">
+              <span class="label">Multiple text input</span>
+              <span class="field-help"><span class="icon-16 icn-help">This is help description.</span></span>
+              <div class="field-item">
+              	<label for="txt1">Text 1</label>
+                <input type="text" id="txt1" />
+              </div>
+              
+              <div class="field-item">
+              	<label for="txt2">Text 2</label>
+                <input type="text" id="txt2" />
+              </div>
+              
+              <div class="field-item">
+              	<label for="txt3">Text 3</label>
+                <input type="text" id="txt3" />
+              </div>
+              
+              <div class="field-item">
+              	<label for="txt4">Disabled Text</label>
+                <input type="text" id="txt4" disabled="disabled" />
+              </div>
+			  <span class="message-type message-error"><span class="message-label">Error</span> <span class="message-value">This is some error message.</span></span>
+            </div>
+            
+            <div class="field">
+            	<span class="label">Multiple select fields</span>
+              <div class="field-item">
+              	<label for="select1">Disabled Select</label>
+                <select id="select1" disabled="disabled">
+                	<option>Option 1</option>
+                  <option>Option 2</option>
+                  <option>Option 3</option>
+                </select>
+              </div>
+              
+              <div class="field-item">
+              	<label for="select2">Select 2</label>
+                <select id="select2">
+                	<option>Option 1</option>
+                  <option>Option 2</option>
+                  <option>Option 3</option>
+                </select>
+              </div>
+              
+              <div class="field-item">
+              	<label for="select3">Select 3</label>
+                <select id="select3">
+                	<option>Option 1</option>
+                  <option>Option 2</option>
+                  <option>Option 3</option>
+                </select>
+              </div>
+              
+              <div class="field-item">
+              	<label for="select4">Select 4</label>
+                <select id="select4">
+                	<option>Option 1</option>
+                  <option>Option 2</option>
+                  <option>Option 3</option>
+                </select>
+              </div>
+            </div>
+            
+            <div class="field">
+            	<span class="label">Multiple textareas</span>
+              <div class="field-item">
+              	<label for="ta1">Disabled Textarea </label>
+                <textarea id="ta1" disabled="disabled"></textarea>
+              </div>
+              
+              <div class="field-item">
+              	<label for="ta2">Textarea 2</label>
+                <textarea id="ta2"></textarea>
+              </div>
+              
+              <div class="field-item">
+              	<label for="ta3">Textarea 3</label>
+              <span class="field-help"><span class="icon-16 icn-help">This is a help text for the 3rd textarea.</span></span>
+                <textarea id="ta3"></textarea>
+              </div>
+            </div>
+                        
+            <!-- Radio and checkbox input fields share the same classes "field radio-check-field clearfix". Each instance of radio or checkbox's div contains the class "radio-check-item". -->
+            <hr />
+            <h4>Radio / checkboxes</h4>
+            
+            <div class="field radio-check-field clearfix">
+            	<span class="label">Regular radio elements</span>
+              <div class="radio-check-item">
+              	<input type="radio" id="radio1" name="radio" />
+                <label for="radio1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin convallis fringilla accumsan.</label>
+              </div>
+              
+              <div class="radio-check-item">
+              	<input type="radio" id="radio2" name="radio" />
+                <label for="radio2">Radio 2</label>
+              </div>
+              
+              <div class="radio-check-item">
+              	<input type="radio" id="radio3" name="radio" />
+                <label for="radio3">Radio 3</label>
+              </div>
+            </div>
+            
+            <div class="field radio-check-field clearfix">
+            	<span class="label">Regular checkboxes</span>
+              <div class="radio-check-item">
+              	<input type="checkbox" id="cb1" name="cb" />
+                <label for="cb1">Nunc a elit ut ligula ullamcorper laoreet. Suspendisse nulla justo, egestas in tempor non, vestibulum a quam. </label>
+              </div>
+              
+              <div class="radio-check-item">
+              	<input type="checkbox" id="cb2" name="cb" />
+                <label for="cb2">Checkbox 2</label>
+              </div>
+              
+              <div class="radio-check-item">
+              	<input type="checkbox" id="cb3" name="cb" />
+                <label for="cb3">Checkbox 2</label>
+              </div>
+            </div>
+            
+            
+            <!-- Form's main action buttons have default styles and can be used like in the following examples: -->
+            <h4>Inline Field Buttons</h4>
+            <p>Inline "field buttons" are buttons that can be used when retrieving data from the server prior to the actual form submission.</p> 
+            <p>This type of button can only be either a <code>button type="button"</code> or <code>input type="button"</code> with <code>class="btn"</code>. It <strong>cannot be</strong> a <code>button type="submit"</code> or an <code>input type="submit"</code> because it will inherit the default styling for buttons of <code>type=submit</code>, which should only be for the actual submit actions of a form. This is so as to keep consistency of the usage throughout.</p>
+            <pre>&lt;button type="button" class="btn"&gt;Find&lt;/button&gt;
+---
+&lt;input type="button" value="Button" class="btn" /&gt;</pre>
+            
+            <div class="field">
+            	<span class="label">Input text and an input button</span>
+              <div class="field-item with-button"><!-- "with-button" class is necessary to fix the display of the buttons.-->
+              	<label for="input_text">Reference Number</label>
+                <input type="text" id="input_text" disabled="disabled" />
+                <button type="button" class="btn" disabled="disabled">Find</button>
+                <!--<input type="button" value="Find" class="btn" />-->
+              </div>
+              
+              <div class="field-item with-button"><!-- "with-button" class is necessary to fix the display of the buttons.-->
+              	<label for="input_text2">Input text 2</label>
+                <input type="text" id="input_text2" />
+                <input type="button" value="Button" class="btn" />
+              </div>
+            </div>
+            
+            <hr />
+            
+            <!-- Form Action Buttons -->
+            <h4>Default Form Action Buttons</h4>
+            <p>Default form action buttons are the main buttons that can normally be found in a regular form. Use either <code>button</code> or <code>input</code> with <code>type="submit"</code> or <code>type="button"</code> or <code>type=reset</code>, <strong>no class attribute attached</strong>. Should there be a case when an action button be <code>disabled</code>, include the attribute <code>disabled="disabled"</code> so that the button behaves as it should and inherits the style for the state.</p>
+            <p>Please not that <code>type=submit</code> button should always be different in style (green) from the other buttons (grey) for easy recognition.</p>
+            <p>Default form action buttons can be one or combinations of the following buttons:</p>
+            <div class="field button-field">
+            	<!-- Input Buttons-->
+              <input type="submit" value="Submit" />
+              <input type="submit" value="Submit" disabled="disabled" />
+              
+              <input type="button" value="Input Button" />
+              <input type="button" value="Button" disabled="disabled" />
+              
+              <input type="reset" value="Reset" />
+              <input type="reset" value="Reset" disabled="disabled" />
+              
+              <a href="#">Cancel</a>
+              <a href="#">Another link</a>
+              
+              <hr />
+              <!-- Buttons -->
+              <button type="submit">Submit</button>
+              <button type="submit" disabled="disabled">Submit</button>
+              
+              <button type="button">Button</button>
+              <button type="button" disabled="disabled">Button</button>
+              
+              <button type="reset">Reset</button>
+              <button type="reset" disabled="disabled">Reset</button>
+            </div>
+          </fieldset>
+          
+          <hr />
+          
+          
+          <h4>Button Link</h4>
+          <p>A "button link" is a link that looks like a button, which can be used as "call-to-action" buttons. To set the Button Link to be "disabled", simply attach the class <code>btn-disabled</code> to it.</p>
+          <a href="#" class="btn-link">Learn more</a>
+          <pre>&lt;a href="#" <code>class="btn-link"</code>&gt;Learn more&lt;/a&gt;</pre>
+          <a class="btn-link btn-disabled">Learn more</a>
+          <pre>&lt;a <code>class="btn-link btn-disabled"</code>&gt;Learn more&lt;/a&gt;</pre>
+          
+          <hr />
+          
+          
+          <h4>Promo Button Link</h4>
+          <p>A "promo button link" is another type of button link mainly for promotional (call-to-action) usage. Similar to Button Link, to set the Promo Button Link to be "disabled", attach the class <code>btn-disabled</code> to it.</p>
+          <a href="#" class="btn-promo">Sign-up now</a>
+          <pre>&lt;a href="#" <code>class="btn-promo"</code>&gt;Sign-up now&lt;/a&gt;</pre>
+          <a class="btn-promo btn-disabled">Sign-up now</a>
+          <pre>&lt;a <code>class="btn-promo btn-disabled"</code>&gt;Sign-up now&lt;/a&gt;</pre>
+          
+          
+          <hr />
+          
+          
+          <!-- The Wizard -->
+          <h1>The Wizard</h1>
+          <div class="wizard">
+          	<div class="wizard-steps">
+            	<ul class="clearfix">
+              	<li>
+                	<a href="#" class="visited"><!-- Add class "visited" to steps that are done. Similarly, The step description should have the classes "icon-16 icn-check icon-only". Please note of the element where the class is added.-->
+                    <span class="step-label">Step 1</span>
+                    <span class="step-description">Provide details</span>
+                  </a>
+                </li>
+                <li>
+                	<a href="#" class="visited"><!-- Add class "selected" to the current step. Please note of the element where the class is added. -->
+                    <span class="step-label"> Step 2</span>
+                    <span class="step-description">Review details</span>
+                  </a>
+                </li>
+                <li>
+                	<a href="#" class="selected">
+                    <span class="step-label"> Step 3</span>
+                    <span class="step-description">Verify Terms &amp; Conditions</span>
+                  </a>
+                </li>
+                <li>
+                	<a href="#">
+                    <span class="step-label"> Step 4</span>
+                    <span class="step-description">Process completed</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="wizard-content">
+            	<p>The wizard content goes here.</p>
+            </div>
+            <div class="wizard-nav">
+            	<fieldset>
+              	<div class="field button-field">
+                	<input type="submit" value="Next" /> <a href="#" class="wizard-back">&laquo; Go back</a>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+          
+          <hr />
+          
+          <h1>The Modal Box</h1>
+          <p>The Modal Box accepts the following custom settings:</p>
+          <pre>$('.selector').modal({
+  'width': 400, // Default width of the modal box.
+  'height': 400, // Default height of the modal box
+  'isAjax': false, // Default "false" if content is coming from an ID on the page, set to "true" if the content is retrieved via ajax.
+  'triggerText': 'Click here', // Default text for the trigger button: use for 
+  'triggerClass': 'box-trigger', // Default class for the the trigger
+  'closeTxt': 'Close'	// Default text of the close button
+});
+          </pre>
+          <h2>Content from an ID</h2>
+          <p>Modal box can be used to display a block of text content from the same page using the <code>id</code> attribute of the element. Example,</p>
+          <div class="sample-modal">
+          	<h1>Sample Content</h1>
+            <p>This is some content that goes in to the modal box. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer magna felis, pellentesque ac viverra nec, luctus non leo. Nam elementum leo ac risus malesuada in volutpat nisl cursus. Curabitur condimentum lacinia nibh a bibendum.</p>
+          </div>
+          
+          <hr />
+          
+          <h2>Content via AJAX</h2>
+          <p>Similarly, the content may come from another page and may be retrieved via AJAX. Example,</p>
+          <a href="ajax.html" class="btn-link sample-external">Click here</a>
+          
+          
+          
+          
+        </div>
+        
+        <div class="side-content">
+          <h5 class="icon-16 icn-info">Stand-alone Info</h5>
+          <p>Some info goes here.</p>
+          <ul>
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>Pellentesque pharetra elementum ultricies</li>
+            <li>Donec libero est, lobortis non dapibus tincidunt, rutrum sit amet risus.</li>
+          </ul>
+          
+          <h6>Nam iaculis nibh sed justo commodo</h6>
+          <ol>
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>Pellentesque pharetra elementum ultricies</li>
+            <li>Donec libero est, lobortis non dapibus tincidunt, rutrum sit amet risus.</li>
+          </ol>
+          
+          <hr />
+          
+          <div class="container box-info">
+          	<h5><span class="icon-16 icn-info">Box Info</span></h5>
+            <ul class="container-action">
+            	<li><a href="#">Pellentesque</a></li>
+            </ul>
+            <p>Some info goes here.</p>
+            <ul>
+            	<li>Lorem ipsum dolor sit amet</li>
+              <li>Pellentesque pharetra elementum ultricies</li>
+              <li>Donec libero est, lobortis non dapibus tincidunt, rutrum sit amet risus.</li>
+            </ul>
+            
+            <h6>Nam iaculis nibh sed justo commodo</h6>
+            <ol>
+            	<li>Lorem ipsum dolor sit amet</li>
+              <li>Pellentesque pharetra elementum ultricies</li>
+              <li>Donec libero est, lobortis non dapibus tincidunt, rutrum sit amet risus.</li>
+            </ol>
+          </div>
+          
+          
+          <hr />
+          
+          <div class="container box-info">
+          	<h5><span class="icon-16 icn-help">Help</span></h5>
+            <div class="accordion">
+              <div class="accordion-panel first">
+                <h5>Panel 1</h5>
+                <div class="accordion-content">
+                  <p>Donec tincidunt libero et mauris facilisis luctus. Donec adipiscing tempor condimentum. Suspendisse ultrices, tellus vel eleifend consectetur, augue erat molestie mauris, laoreet mollis risus lectus nec massa. Mauris sed libero nunc.</p>
+                </div>
+              </div>
+              
+              <div class="accordion-panel">
+                <h5>Panel 2</h5>
+                <div class="accordion-content">
+                  <p>Donec volutpat felis vitae lectus molestie porttitor. Donec sed purus risus, nec volutpat erat. Cras feugiat tellus nec neque rutrum ac vestibulum sem pulvinar.</p>
+                </div>
+              </div>
+              
+              <div class="accordion-panel last">
+                <h5>Panel 3</h5>
+                <div class="accordion-content">
+                  <p>hasellus ut felis eget orci rhoncus luctus vitae in nisi. Curabitur sodales, arcu at congue mollis, orci lorem hendrerit nisl, et facilisis velit massa vitae nunc.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <hr />
+          
+          <div class="container box-recommendation">
+          	<h5><span class="icon-24 icn-mascot">Payza recommends&hellip;</span></h5>
+            <ul>
+            	<li>Use your referral URL to put in emails or your website.</li>
+              <li>Earn money by referring other people to our services.</li>
+              <li>Direct referrals are those who used your link to register for an account. </li>
+            </ul>
+            <p><a href="#" class="icon-16 icn-external-link" rel="external">Learn more about referrals and rewards.</a></p>
+          </div>
+          
+          
+          
+        </div>
+      </div>
+      
+      
+		</div>
+    
+    
+    
+	</div>
+	
+	<footer>
+		<div class="content">
+			<p class="copyright">&copy; Copyright Payza 2012. All Rights Reserved.</p>
+      <ul class="misc-links">
+      	<li><a href="#">Fees</a></li>
+        <li><a href="#">Support</a></li>
+        <li><a href="#">Terms &amp; Conditions</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Security Center</a></li>
+      </ul>
+		</div>
+	</footer>
+
+</div>
+
+<!-- here comes the javascript -->
+
+<!-- Grab Google CDN's jQuery. fall back to local if necessary -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script>window.jQuery || document.write("<script src='js/jquery-1.5.1.min.js'>\x3C/script>")</script>
+
+<!-- this is where we put our custom functions -->
+<script src="js/functions.js"></script>
+
+<!-- Asynchronous google analytics; this is the official snippet.
+	 Replace UA-XXXXXX-XX with your site's ID and uncomment to enable.
+	 
+<script>
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-XXXXXX-XX']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+-->
+  
+</body>
+</html>

@@ -1,0 +1,151 @@
+/*----------------
+	Media Queries
+------------------*/
+
+/* Global Misc 
+-----------------*/
+/* Table Misc */
+table td a.icn-incoming .icn,
+table td a.icn-outgoing .icn {margin-right: 0;}
+
+table td a.icn-incoming .icn-txt,
+table td a.icn-outgoing .icn-txt {
+	display: none;}	
+	
+table .method,
+table td .to-from,
+table td ul.to-from-info li,
+table td .status,
+table .cell-amount span {
+	overflow: hidden;
+	text-overflow: ellipsis;}
+	
+table .method,
+table td .to-from,
+table td ul.to-from-info li {width: 16px;}	
+
+table td ul.to-from-info {width: 16px;}
+
+table .method {
+	display: block;
+	white-space: nowrap;
+	width: 20px;}
+
+table th .date,
+table th .type,
+table th .status,
+table th .method {display: none;}
+
+table td .type {width: 16px;}
+
+table td .status {width: 50px;}
+
+table .cell-amount span {width: 85px;}
+
+table td ul.to-from-info li .icn,
+table td .method .icon-16 .icn,
+table td .to-from .icon-16 .icn,
+table td .to-from .flag-16 .icn {
+	display: inline-block;
+	margin-right: 0;}
+
+table td ul.to-from-info li .icn-txt,
+table td .method .icon-16 .icn-txt,
+table td .to-from .icon-16 .icn-txt,
+table td .to-from .flag-16 .icn-txt,
+table td ul.to-from-info li em,
+table td .method em,
+table td .to-from em {display: none;}
+
+
+/* Layout 
+------------*/
+.content {width: 600px;}
+
+.content .main-side .main-content {
+	padding-left: 15px;
+	width: 325px;}
+
+.content .main-side .side-content {width: 194px;}	
+
+.main .content, 
+.main .sub-nav {width: 580px;}
+
+/* Form 
+----------*/
+fieldset input[type=text],
+fieldset input[type=password],
+fieldset textarea {width: 96%;}
+
+fieldset select {width: 100%;}
+
+fieldset .radio-check-field label {width: 90%;}	
+
+fieldset .field-item {width: 145px;}
+
+fieldset .with-button {width: 250px;}
+
+
+/* Box 
+---------*/
+.js .box table .row-action ul {width: auto;}
+
+.js .box table .row-action ul li .icon-16 .icn-txt {display: none;}
+
+
+/* Menu Tabs 
+---------------*/
+.js .menu-tabs ul li.selected ul {width: 518px;}
+
+
+/* Pagination 
+----------------*/
+.pagination .page-counter {display: none;}
+
+
+/* Wizard 
+------------*/
+.wizard .wizard-steps ul li .step-label {font-size: 1.3em;}
+
+.wizard .wizard-steps ul li .step-description {display: none;}
+
+.wizard .wizard-steps ul li a {
+	background-position: right -162px;
+	padding-right: 20px;}
+
+.wizard .wizard-steps ul .last a {background-position: right -82px;}
+
+.wizard .wizard-steps ul li .selected {background-position: right -240px;}
+
+.wizard .wizard-steps ul li .visited {background-position: right -319px;}
+
+.js .wizard .wizard-steps ul li a .step-description,
+.js .wizard .wizard-steps ul li .selected .step-description,
+.js .wizard .wizard-steps ul li a:hover .step-description {display: none;}
+
+.js .wizard .wizard-steps ul li .selected .step-label,
+.js .wizard .wizard-steps ul li a:hover .step-label {padding-right: 0;}
+
+
+/* Header 
+------------*/
+.js header nav .nav-with-sub .account-menu li {width: auto;}
+
+.js header nav .nav-with-sub .mega-menu-button {padding-right: 8px;}
+
+.js header nav .nav-with-sub .mega-menu-button span.label {
+	background: url(../images/sprites/icon-36.png) 0 -80px no-repeat;
+	display: block;
+	height: 36px;
+	margin-left: 8px; margin-top: 5px;
+	overflow: hidden;
+	text-indent: -9999px;
+	width: 36px;}
+
+.js header nav .nav-with-sub .mega-menu-button:hover span.label,
+.js header nav .nav-with-sub .selected span.label,
+.js header nav .nav-with-sub .selected:hover span.label {background-position: 0 -120px;}
+
+.js header nav .action-menu li {width: auto;}
+
+

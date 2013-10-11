@@ -1,0 +1,50 @@
+<%-- Prototype Client Form Validator --%>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var field = $('fieldset input[type=text], fieldset select, fieldset textarea');
+
+        // Sample field: Email
+        $('input#ctl00_ctl00_main_MainContent_ctlWizard_TxtEmail').blur(function () {
+            checkField(this);
+        });
+
+        $('input#ctl00_ctl00_main_MainContent_ctlWizard_TxtEmail').focus(function () {
+            var parent = error = $(this).parent(), error = parent.hasClass('field-error');
+
+
+            // Remove error message if displayed
+            if (error) {
+                removeErrors(this, parent);
+            }
+
+        });
+
+        function checkField(el) {
+            // Check if field:
+            
+            // 1. is required and empty 
+            
+            if ($(el).val() === '') {
+                insertErrorMsg(el);
+            }
+
+            // 2. has wrong format 
+
+            // 3. invalid characters
+            
+
+        }
+
+
+        function insertErrorMsg(el) {
+            $(el).parent('.field').addClass('field-message field-error');
+            $(el).after('<span class="message-type message-error"><span class="message-label">Error</span> <span class="message-value">This field is required.</span></span>');
+        }
+
+        function removeErrors(el, p) {
+            $(p).removeClass('field-error');
+            $(p).find('span.message-error').remove();
+        }
+
+    });
+</script>    

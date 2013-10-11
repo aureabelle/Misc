@@ -1,0 +1,36 @@
+/* 
+	Browser Fixes: includes browser-specific overwrites.
+*/
+
+/* Webkit */
+.webkit .main {margin-top: -5px;}
+
+/*.webkit fieldset legend {
+	margin-bottom: 0;
+	padding-bottom: 10px;}*/
+
+.webkit fieldset select {line-height: 1.8em;}
+
+.js .webkit header .top-menu li .sub-menu {top: 21px;}
+
+.js .webkit .box .box-action li .icon-16 {padding-top: 8px;}
+
+.js .webkit .box .box-action li .trigger {margin-top: 2px;}
+
+.js .webkit .list-group h5 {padding-bottom: 7px;}
+
+
+
+/* Opera */
+.opera .main {margin-top: -5px;}
+
+.js .opera header .top-menu li .sub-menu {top: 21px;}
+
+.js .opera .box .box-action li .icon-16 {padding-top: 11px;}
+
+.js .opera .box .box-action li .trigger {margin-top: 0px;}
+
+.js .opera .list-group h5 {padding-bottom: 7px;}
+
+/* IE */
+.ie9 header nav .action-menu li {width: 92px;}
